@@ -1,0 +1,24 @@
+include ../modules/mixins
+.main-menu
+    a.logo.main-menu__logo(href="/")
+        include ../modules/logo
+    .challenge Choose your game
+    .main-menu__title
+        img(src="static/img/logo-icons/menuTitleIcon.png", alt="")
+        | World of Warcraft
+        | Shadowlands / Classic
+    ul.nav-menu
+        +menu-item("Coaching Arena","#","CoachingArena")
+        +menu-item("PVP Arena Rating","#","PVPArenaRating")
+        +menu-item("Castle Nathria","#","CastleNathria")
+        +menu-item("Torghast Tower","#","TorghastTower")
+        +menu-item("WoW Mounts","#","WoWMounts")
+        +menu-item("PVP Arena Rating","#","PVPArenaRating", "sub-menu-link", "Glory", "Shadowlands")
+        +menu-item("WoW Raid Boost","#","WoWRaidBoost")
+        +menu-item("Mythic+","#","Mythic")
+        +menu-item("Item Level","#","ItemLevel")
+        +menu-item("Leveling","#","Leveling")
+        +menu-item("Gladiator Arena","#","GladiatorArena")
+        +menu-item("WoW Classic","#","WoWClassic")
+        +menu-item("Accounts","#","Accounts")
+        +menu-item("Request a service","#","RequestAService")

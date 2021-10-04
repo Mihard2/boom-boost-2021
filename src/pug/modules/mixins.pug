@@ -1,0 +1,33 @@
+mixin menu-item(text, link, className, subMenu, text2, text3)
+
+    if subMenu
+        li.nav-menu__item(class=`nav-menu__item--${className} ${subMenu}`)
+            a(href=`${link}`)=text
+            ul.sub-menu
+                li.nav-menu__item
+                    a(href=`${link}`)=text2
+                li.nav-menu__item
+                    a(href=`${link}`)=text3
+    else
+        li.nav-menu__item(class=`nav-menu__item--${className}`)
+            a(href=`${link}`)=text
+
+
+
+
+//- mixin switcher(id,name,state)
+//-     label.langCheck__item(class=`langCheck__item-${name} ${state}`, for=id)
+//-         .icon(class=`icon-${name}`)
+//-         span.langContext=name        
+//-         input(type="checkbox",id=id, name=id)
+//-         block
+//- .langCheck
+//-     .langCheck__wrapper
+//-         +switcher('','en','selected')
+//-             span.arrow
+//-         +switcher('en','en','active')
+//-         +switcher('pt','pt','')
+//-         +switcher('ru','ru','')
+//-         +switcher('tr','tr','')
+
+

@@ -1,0 +1,42 @@
+.header {
+    margin-top: 14px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+
+    .langCheck {
+        position: absolute;
+        right: 5%;
+        top: 0;
+    }
+    @include mq(md) {
+        margin-top: 34px;
+        justify-content: center;
+
+    }
+
+    .logo {
+        margin-bottom: 20px;
+
+        h1 {
+            text-transform: uppercase;
+            @include adaptiv-font(43, 30);
+            text-align: center;
+
+            @include mq(fhd) {
+                font-size: 43px;
+            }
+        }
+
+        @include mq(md) {
+            margin-bottom: 30px;
+        }
+
+        & * {
+            font-family: $logoText;
+            font-style: normal;
+        }
+    }
+}
