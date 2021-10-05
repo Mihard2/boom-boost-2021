@@ -1,9 +1,13 @@
 block variables
+    - var sectionClass
+    - var contentTitle
+    - var linkName = false;
 
-section.content-block
+section.content-block(class=`content-block--${sectionClass}`)
     .content-block__header
         h2.content-block__title=contentTitle
-        a.transparent-link.content-block__show-more=linkName
+        if linkName
+            a.transparent-link.content-block__show-more=linkName
     
     .content-block__body
         block content 

@@ -34,8 +34,48 @@ mixin cardProduct(img, title, price1, price2, priceOld)
             .product-card__more more            
 
 
+mixin cardRaid(date, time, title, logo, price, active, ...description)
+    if active 
+        .card-raid.card-raid--active 
+            .card-raid__head 
+                span.card-raid__desc Next raid in 
+                span.card-raid__date=date
+                span.card-raid__time=time
+            .card-raid__body 
+                .card-raid__title=title
+                ul.card-raid__desc 
+                    each desc in description
+                        li=desc
+                .card-raid__logo 
+                    img(src=`static/img/logo-icons/logo-${logo}.png`, alt="")
+                .card-raid__price=price 
+            a.card-raid__link add to basket
+    else 
+        .card-raid
+            .card-raid__head 
+                span.card-raid__date=date
+                span.card-raid__time=time
+            .card-raid__body 
+                .card-raid__title=title
+                ul.card-raid__desc 
+                    each desc in description
+                        li=desc
+                .card-raid__logo 
+                    img(src=`static/img/logo-icons/logo-${logo}.png`, alt="")
+                .card-raid__price=price 
+            a.card-raid__link add to basket
+
+mixin whyChooseCard(className, title, desc)
+    .why-choose(class=`why-choose--${className}`)
+        .why-choose__icon
+        .why-choose__content 
+            .why-choose__title=title 
+            .why-choose__desc=desc
+
 mixin tabsLink(...items)
     ul.tabs-block__nav
         each item in items
             li 
-                a(href="#")=item 
+                a(href="#")=item
+
+ 
