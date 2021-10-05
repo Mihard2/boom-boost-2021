@@ -13,21 +13,29 @@ mixin menu-item(text, link, className, subMenu, text2, text3)
             a(href=`${link}`)=text
 
 
+mixin cardProduct(img, title, price1, price2, priceOld)
+    if price2
+        a.product-card(href="#")
+            img.product-card__image(src=img, alt="")
+            .product-card__title=title 
+            .product-card__price-block
+                span.price-1=price1 
+                |  -  
+                span.price-2=price2
+            .product-card__more more
+            
+    else
+        a.product-card(href="#")
+            img.product-card__image(src=img, alt="")
+            .product-card__title=title 
+            .product-card__price-block 
+               span.price-1=price1
+               span.price-old=priceOld
+            .product-card__more more            
 
 
-//- mixin switcher(id,name,state)
-//-     label.langCheck__item(class=`langCheck__item-${name} ${state}`, for=id)
-//-         .icon(class=`icon-${name}`)
-//-         span.langContext=name        
-//-         input(type="checkbox",id=id, name=id)
-//-         block
-//- .langCheck
-//-     .langCheck__wrapper
-//-         +switcher('','en','selected')
-//-             span.arrow
-//-         +switcher('en','en','active')
-//-         +switcher('pt','pt','')
-//-         +switcher('ru','ru','')
-//-         +switcher('tr','tr','')
-
-
+mixin tabsLink(...items)
+    ul.tabs-block__nav
+        each item in items
+            li 
+                a(href="#")=item 

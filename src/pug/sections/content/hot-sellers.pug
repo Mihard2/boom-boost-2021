@@ -1,0 +1,13 @@
+extends ../../layout/content-block
+include ../../modules/mixins
+
+block variables
+    - var contentTitle = 'Hot offers and Best Sellers'
+    - var linkName = "check all offers";
+
+
+block content
+    +cardProduct("static/img/cards/Frame_1.jpg", "[EU/US] 1800 rating with Rival Title","$88.99","","$118.00")
+    +cardProduct("static/img/cards/Frame_2.jpg", "Play With PRO 3v3","$34.99","$356.00")
+    +cardProduct("static/img/cards/Frame_3.jpg", "[EU/US] 2100 rating with Duelist Title","$245.00","$299.00")
+    +cardProduct("static/img/cards/Frame_4.jpg", "Buy Arena 2v2 Rating Boost","$74.00","$169.00")
