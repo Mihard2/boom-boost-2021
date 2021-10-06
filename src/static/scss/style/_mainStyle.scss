@@ -9,31 +9,22 @@ body {
     color: $mainFont;
 }
 
-* {
-    // font-family: $mainText;
-    font-style: italic;
-}
+// * {
+//     font-family: $mainText;
+// }
 
-.main-container {
-    max-width: 1920px;
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
-    display: flex;
-}
+// .left-text {
+//     text-align: left;
+// }
 
-.left-text {
-    text-align: left;
-}
+// .right-text {
+//     text-align: right;
+// }
 
-.right-text {
-    text-align: right;
-}
+// .orange-text {
+//     color: $orange
+// }
 
-.orange-text {
-    color: $orange
-}
-
-.yellow-text {
-    color: $yellow;
-}
+// .yellow-text {
+//     color: $yellow;
+// }
