@@ -1,0 +1,91 @@
+.icons-main {
+    background-image: url('/static/img/logo-icons/icons-main.png');
+    background-size: auto 450%;
+    background-repeat: no-repeat;
+    &::before,
+    &::after {
+        background-image: url('/static/img/logo-icons/icons-main.png');
+        background-size: auto 450%;
+        background-repeat: no-repeat;
+    }
+    &__discord {
+        background-position: 57% 36%;
+
+        &::before {
+            background-position: 57% 0%;
+        }
+    }
+
+    &__instagram {
+        background-position: 73% 36%;
+
+        &::before {
+            background-position: 73% 0%;
+        }
+    }
+
+    &__skype {
+        background-position: 87% 36%;
+
+        &::before {
+            background-position: 87% 0%;
+        }
+    }
+    &__login {
+        background-image: none;
+        &::before {
+            background-position: 100% 36%;
+        }
+    }
+    &__searche {
+        background-size: auto 300%;
+        background-position: 113% -10%;
+    }
+    &__cart {
+        background-position: 100% 70%;
+    }
+    &__horde {
+        background-position: 10.3% 36%;
+    }
+    &__alliance {
+        background-position: 1% 36%;
+    }
+}
+.icons-game {
+    background-image: url('/static/img/logo-icons/icons-game.png');
+    background-size: auto 400%;
+    background-repeat: no-repeat;
+    &__support {
+        background-position: 89% 0;
+    }
+    &__reviews {
+        background-position: 101% 0;
+    }
+    &__vpn {
+        background-position: 89% 31%;
+    }
+    &__safe-data {
+        background-position: 0 0;
+    }
+    &__money-back {
+        background-position: 11% 0;
+    }
+    &__profi {
+        background-position: 44.5% 0;
+    }
+    &__leveling {
+        background-position: 33% 0;
+    }
+    &__WoWClassic {
+        background-position: 55.5% 0;
+    }
+    &__Mythic {
+        background-position: 66.8% 31%;
+    }
+    &__PVPArenaRating {
+        background-position: 22% 31%;
+    }
+    &__GladiatorArena {
+        background-position: 22% 0;
+    }
+}

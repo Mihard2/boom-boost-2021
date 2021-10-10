@@ -6,12 +6,81 @@ body {
     height: 100%;
     min-height: 100vh;
     font-size: 16px;
-    color: $mainFont;
+    color: $mainColorFont;
 }
 
-// * {
-//     font-family: $mainText;
-// }
+*,
+*::before,
+*::after {
+    color: $mainColorFont;
+    transition: all .4s;
+    font-family: $mainFont;
+    font-size: 16px;
+}
+
+a {
+    cursor: pointer;
+
+    &:hover {
+        color: $activeColor;
+    }
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid transparent;
+    width: 100%;
+    max-width: 263px;
+    font-size: 12px;
+    color: $activeColor;
+    &-bg {
+        background-color: $activeColor;
+        color: $darkColorFont;    
+
+        &:hover {
+            background-color: transparent;
+            border-color: $activeColor;
+        }
+        &--transparent {
+            background-color: transparent;
+            border-color: $activeColor; 
+
+            &:hover {
+                background-color: $activeColor;
+                color: $darkColorFont;   
+            }
+        }
+    }
+    
+}
+
+input {
+    &[type="submit"] {
+        cursor: pointer;
+    }
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 100%;
+    font-family: $mainFont;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
 
 // .left-text {
 //     text-align: left;

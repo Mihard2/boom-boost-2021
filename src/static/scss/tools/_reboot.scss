@@ -6,6 +6,7 @@
 
 a {
     text-decoration: none;
+    color: $mainColorFont;
 }
 
 ul,
@@ -16,6 +17,8 @@ ol {
 
 input {
     outline: none;
+    border: none;
+    background: none;
 }
 
 button {

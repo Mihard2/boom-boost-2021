@@ -1,0 +1,17 @@
+.content-block {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 60px;
+
+        h2 {
+            max-width: 60%;
+        }
+    }
+}
+.content-block__popular {
+    .cards-wrapper {
+        justify-content: space-between;
+    }
+}

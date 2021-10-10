@@ -1,0 +1,15 @@
+extends ../../layout/content-block
+include ../../modules/mixins
+
+block variables
+    - sectionClass = "advantages"
+    - blockCards = true
+    - contentTitle = 'why choose us?';
+
+block content
+    +cardAdvantages("support", "support", "Provide 24/7 support and solve any issues that may come up fast and professionaly.")
+    +cardAdvantages("reviews", "reviews", "A large number of reviews on an independent site Trustpilot.")
+    +cardAdvantages("vpn", "vpn", "We use VPN to to keep your account safe.")
+    +cardAdvantages("safe-data", "safe data", "Your data is protected by SSL certificate.")
+    +cardAdvantages("money-back", "money back guarantee", "Process full and immediate refund in case of default.")
+    +cardAdvantages("profi", "profi", "A truly professional booster team, including R1 players.")

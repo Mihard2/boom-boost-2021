@@ -1,16 +1,19 @@
 //      TOOLS
+@import 'tools/variables';
 @import 'tools/reboot';
 @import 'tools/grid';
-@import 'tools/variables';
-// @import 'tools/fonts';
+@import 'tools/fonts';
 @import 'tools/mq';
+@import 'tools/iconsSprite-position';
 
 //      ELEMENTS
 @import 'elements/menu';
-// @import 'elements/popUp-info';
-// @import 'elements/switcher';
+@import 'elements/header';
+@import 'elements/cards';
+@import 'elements/tabs';
 
 //      SECTIONS
-// @import 'style/content';
+@import 'sections/ALL-SECTIONS';
+@import 'sections/top';
 // @import 'style/header';
 @import 'style/mainStyle';

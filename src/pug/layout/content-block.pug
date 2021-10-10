@@ -1,13 +1,16 @@
+include ../modules/mixins
+
 block variables
     - var sectionClass
     - var contentTitle
-    - var linkName = false;
+    - var blockCards = false
+    - var linkContent = false;
 
-section.content-block(class=`content-block--${sectionClass}`)
+section.container(class=`content-block__${sectionClass}`)
     .content-block__header
         h2.content-block__title=contentTitle
-        if linkName
-            a.transparent-link.content-block__show-more=linkName
+        if linkContent
+            +link(`${linkContent}`, '#', true)
     
-    .content-block__body
+    .content-block__body(class=`${blockCards === true ? "cards-wrapper" : ""}`)
         block content 

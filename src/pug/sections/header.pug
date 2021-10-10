@@ -2,20 +2,23 @@
     .header__trust trustpilot 
     form.header__search 
         input(type="text", name="search-form", id="search-form", placeholder="I look for...")
-        input(type="submit", value="search")
+        input.icons-main.icons-main__searche(type="submit", value="")
     .header__support 
-        a.header__support-link support 24/7
-        .header__support-wrapper.support 
-            a.support__link(class="support__link-discord",href="#") discord 
-            a.support__link(class="support__link-instagram",href="#") instagram 
-            a.support__link(class="support__link-skype",href="#") skype 
+        .header__support-title support 24/7
+        .header__support-wrapper
+            a.header__support-link.icons-main.icons-main__discord(href="#") 
+            a.header__support-link.icons-main.icons-main__instagram(href="#") 
+            a.header__support-link.icons-main.icons-main__skype(href="#") 
     .header__lang
-        a.lang__switch.lang__switch--active(href="#") Europe 
-        a.lang__switch(href="#") USA 
-    .header__login.login
-        a.login__popUpLink(href="#")
-        .login__wrapp 
-            a(href="#") Sign In 
-            a(href="#") Sign Up 
-    a.header__cart(href="#")
-        |675$
+        a.header__lang-switch.header__lang-switch--active(href="#") Europe 
+        a.header__lang-switch(href="#") USA 
+    .header__login
+        .header__login-icon.icons-main.icons-main__login
+        .header__login-wrapp 
+            a(href="#") Sign In
+            span.separator /
+            a(href="#") Sign Up
+    a.header__cart.link.link-bg(href="#")
+        .header__cart-counter.icons-main.icons-main__cart
+            span.header__cart-counterTotal 3
+        .header__cart-total €675

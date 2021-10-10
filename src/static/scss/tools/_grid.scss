@@ -1,3 +1,7 @@
+.container {
+    padding-left: 68px;
+    padding-right: 68px;
+}
 .main-container {
     max-width: 1920px;
     margin: 0 auto;
@@ -6,11 +10,19 @@
     display: flex;
     .sidebar-block {
         width: 256px;
+        min-width: 256px;
+        display: flex;
         position: relative;
         .main-menu {
             position: fixed;
             top: 0;
             width: 256px;
+        }
+    }
+    .content-block {
+        flex: 1 auto;
+        section {
+            padding-top: 100px;
         }
     }
 }

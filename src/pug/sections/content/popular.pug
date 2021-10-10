@@ -1,0 +1,13 @@
+extends ../../layout/content-block
+include ../../modules/mixins
+
+block variables
+    - sectionClass = "popular"
+    - contentTitle = 'popular services';
+
+block content
+    +cardPopular("leveling","leveling")
+    +cardPopular("WoWClassic","WoW Classic")
+    +cardPopular("Mythic","Mythic+")
+    +cardPopular("PVPArenaRating","PVP Arena Rating")
+    +cardPopular("GladiatorArena","Gladiator Arena")

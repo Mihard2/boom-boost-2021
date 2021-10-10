@@ -1,16 +1,19 @@
-.top
+include ../../../modules/mixins
+
+.top.top--main
     .container 
         .top__content
             h1 Secure and efficient WoW Boosting and Coaching Services
-            .desription Buy WoW Boosts and carries from the most customer oriented website
-            a(href="#") explore the catalog 
+            .description Buy WoW Boosts and carries from the most customer oriented website
+            +link("explore the catalog", "#")
             .event
                 .event__name
-                    .event_logo
-                        img(src="", alt="")
-                    |Sanctum of Domination Heroic Raid Run
+                    .event__name-logo.icons-main.icons-main__horde
+                    |Sanctum of Domination </br> Heroic Raid Run
                 .event__timer 
-                    span.hours 3h : 
-                    span.minutes 42m : 
+                    span.hours 3h 
+                    |: 
+                    span.minutes 42m 
+                    |: 
                     span.seconds 12s
-                a(href="#").event__link Check other raids
+                +link("check other raids", "#", true)

@@ -1,0 +1,32 @@
+.tabs-block {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__nav {
+        display: flex;
+        margin-right: 50px;
+        margin-bottom: 60px;
+        background-color: $activeBg;
+        border-radius: 15px;
+
+        li {
+            a {
+                display: flex;
+                padding: 13px 21px;
+                font-weight: 600;
+                font-size: 14px;
+                border-radius: 15px;
+
+                &.active-tab {
+                    background-color: $bgRed;
+                    padding-left: 33px;
+                    padding-right: 33px;
+                    pointer-events: none;
+                }
+                &:hover {
+                    background-color: $bgRed;
+                }
+            }
+        }
+    }
+}

@@ -1,32 +1,39 @@
 @font-face {
-    font-family: 'Nunito';
-    src: url('./../fonts/Nunito-Black.eot');
-    src: url('./../fonts/Nunito-Black.eot?#iefix') format('embedded-opentype'),
-        url('./../fonts/Nunito-Black.woff2') format('woff2'),
-        url('./../fonts/Nunito-Black.woff') format('woff'),
-        url('./../fonts/Nunito-Black.ttf') format('truetype'),
-        url('./../fonts/Nunito-Black.svg#Nunito-Black') format('svg');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Lemon/Milk(RUS BY LYAJKA)';
-    src: url('./../fonts/LemonMilkRUSBYLYAJKA.eot');
-    src: url('./../fonts/LemonMilkRUSBYLYAJKA.eot?#iefix') format('embedded-opentype'),
-        url('./../fonts/LemonMilkRUSBYLYAJKA.woff2') format('woff2'),
-        url('./../fonts/LemonMilkRUSBYLYAJKA.woff') format('woff'),
-        url('./../fonts/LemonMilkRUSBYLYAJKA.ttf') format('truetype'),
-        url('./../fonts/LemonMilkRUSBYLYAJKA.svg#LemonMilkRUSBYLYAJKA') format('svg');
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-Regular.eot');
+    src: url('/static/fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/static/fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('/static/fonts/Montserrat-Regular.woff') format('woff'),
+        url('/static/fonts/Montserrat-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-SemiBold.eot');
+    src: url('/static/fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/static/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('/static/fonts/Montserrat-SemiBold.woff') format('woff'),
+        url('/static/fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
 
 
-$mainText: 'Lemon/Milk(RUS BY LYAJKA)',
-sans-serif;
-$logoText: 'Nunito',
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-Bold.eot');
+    src: url('/static/fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/static/fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('/static/fonts/Montserrat-Bold.woff') format('woff'),
+        url('/static/fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+$mainFont: 'Montserrat',
 sans-serif;
