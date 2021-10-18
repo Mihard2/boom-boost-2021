@@ -1,0 +1,13 @@
+extends ../../layout/content-block
+include ../../modules/mixins
+
+block variables
+    - sectionClass = "trustpilot"
+    - contentTitle = "trustpilot"
+    - linkContent = "check all faq"
+
+block headerLink
+        +link(`${linkContent}`, '#', true)
+
+block content
+    

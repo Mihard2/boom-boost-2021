@@ -10,8 +10,45 @@
         }
     }
 }
+
 .content-block__popular {
     .cards-wrapper {
         justify-content: space-between;
     }
+}
+
+.content-block__trustpilot {
+    .content-block__header {
+        align-items: center;
+        .truspilot-rating {
+            margin-left: 43px;
+            flex: 1;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            &__logo {
+                width: 241px;
+                height: 37px;
+                display: flex;
+            }
+            &__values {
+                border-left: 1px solid $borderColor;
+                margin-left: 30px;
+                padding-left: 40px;
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+                span {
+                    font-size: 12px;
+                    color: $greeText;
+                    font-weight: 700;
+                    &.ratio-big {
+                        font-size: 40px;
+                        line-height: 90%;
+                    }
+                }
+            }
+        }
+    }
+
 }

@@ -28,13 +28,15 @@
             border-top: 1px solid rgba(255, 182, 0, 0.14);
             border-radius: 0 0 20px 0;
             transition: all .3;
+
             &.sub-menu-link {
                 .sub-menu {
                     max-height: 0;
                     overflow: hidden;
                     transition: all 1s;
                 }
-                & > a {
+
+                &>a {
                     &::after {
                         content: "";
                         display: flex;
@@ -46,8 +48,9 @@
                         // top: 50%;
                     }
                 }
+
                 &:hover {
-                    .sub-menu { 
+                    .sub-menu {
                         max-height: 100px;
                     }
                 }
@@ -55,133 +58,6 @@
 
             &:hover {
                 background-color: $activeBg;
-            }
-
-            &-block {
-
-                &::before,
-                &::after {
-                    transition: all .3s;
-                    content: "";
-                    display: flex;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    height: 100%;
-                    width: 34px;
-                    background-image: url("/static/img/logo-icons/icons-main.png");
-                    background-repeat: no-repeat;
-                    background-size: auto 200%;
-                }
-
-                &::after {
-                    background-image: url("/static/img/logo-icons/icons-main_active.png");
-                    opacity: 0;
-                }
-
-                &.CoachingArena {
-
-                    &::before,
-                    &::after {
-                        background-position: 44% 100%;
-                    }
-                }
-
-                &.PVPArenaRating {
-
-                    &::before,
-                    &::after {
-                        background-position: 22% 100%;
-                    }
-                }
-
-                &.CastleNathria {
-
-                    &::before,
-                    &::after {
-                        background-position: 0% 100%;
-                    }
-                }
-
-                &.TorghastTower {
-
-                    &::before,
-                    &::after {
-                        background-position: 33% 100%;
-                    }
-                }
-
-                &.WoWMounts {
-
-                    &::before,
-                    &::after {
-                        background-position: 11% 100%;
-                    }
-                }
-
-                &.WoWRaidBoost {
-
-                    &::before,
-                    &::after {
-                        background-position: 56% 100%;
-                    }
-                }
-
-                &.Mythic {
-
-                    &::before,
-                    &::after {
-                        background-position: 66.8% 100%;
-                    }
-                }
-
-                &.ItemLevel {
-
-                    &::before,
-                    &::after {
-                        background-position: 77% 100%;
-                    }
-                }
-
-                &.Leveling {
-
-                    &::before,
-                    &::after {
-                        background-position: 34% 0%;
-                    }
-                }
-
-                &.GladiatorArena {
-
-                    &::before,
-                    &::after {
-                        background-position: 22% 0%;
-                    }
-                }
-
-                &.WoWClassic {
-
-                    &::before,
-                    &::after {
-                        background-position: 56% 0%;
-                    }
-                }
-
-                &.Accounts {
-
-                    &::before,
-                    &::after {
-                        background-position: 67% 0%;
-                    }
-                }
-
-                &.RequestAService {
-
-                    &::before,
-                    &::after {
-                        background-position: 78% 0%;
-                    }
-                }
             }
 
             a {
@@ -195,20 +71,31 @@
                     position: relative;
                     display: flex;
                     align-items: center;
-                }
+                    background-image: none;
 
-                &:hover {
-                    span {
+                    &::before,
+                    &::after {
+                        content: '';
+                        display: flex;
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                        left: 0;
+                    }
+
+                    &::after {
+                        opacity: 0;
+                    }
+
+                    &:hover {
                         color: $activeColor;
 
-                        &.nav-menu__item-block {
-                            &::after {
-                                opacity: 1;
-                            }
+                        &::after {
+                            opacity: 1;
+                        }
 
-                            &::before {
-                                opacity: 0;
-                            }
+                        &::before {
+                            opacity: 0;
                         }
                     }
                 }

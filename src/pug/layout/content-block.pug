@@ -1,16 +1,19 @@
-include ../modules/mixins
-
 block variables
     - var sectionClass
     - var contentTitle
     - var blockCards = false
-    - var linkContent = false;
+    - var linkContent = false
+    - var trustContent = false
+    - var trustHeader = false
 
 section.container(class=`content-block__${sectionClass}`)
     .content-block__header
         h2.content-block__title=contentTitle
         if linkContent
-            +link(`${linkContent}`, '#', true)
-    
+            block headerLink
+            
+        if trustHeader
+            block trustHeader
+
     .content-block__body(class=`${blockCards === true ? "cards-wrapper" : ""}`)
         block content 

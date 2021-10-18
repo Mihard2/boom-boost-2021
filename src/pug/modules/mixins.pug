@@ -3,7 +3,7 @@ mixin menu-item(text, link, className, subMenu, text2, text3)
     if subMenu
         li.nav-menu__item(class=`${subMenu}`)
             a(href=`${link}`)
-                span(class=`nav-menu__item-block ${className}`)=text
+                span.icons-game(class=`icons-game__${className}`)=text
             ul.sub-menu
                 li.nav-menu__item
                     a(href=`${link}`)
@@ -14,7 +14,7 @@ mixin menu-item(text, link, className, subMenu, text2, text3)
     else
         li.nav-menu__item
             a(href=`${link}`)
-                span(class=`nav-menu__item-block ${className}`)=text
+                span.icons-game(class=`icons-game__${className}`)=text
 
 
 mixin cardProduct(img, title, subTitle, price1, price2, priceOld)
@@ -71,6 +71,7 @@ mixin cardRaid(date, time, title, logo, price, active, ...description)
                 .card-raid__body-price=price 
             a.link.link-bg.card-raid__link add to basket
 
+
 mixin cardAdvantages(className, title, desc)
     .card-advantages
         .card-advantages__icon.icons-game(class=`icons-game__${className}`)
@@ -84,10 +85,32 @@ mixin cardPopular(className, content)
         .card-popular__logo.icons-game(class=`icons-game__${className}`)
 
 
+mixin cardTrust(img, date, name, content, logo)
+    .card-trustpilot 
+        .card-trustpilot__header
+            .card-trustpilot__header-icon
+                img(src=img, alt="")
+            .card-trustpilot__header-desc
+                .card-trustpilot__header-data=date
+                .card-trustpilot__header-name=name
+            .card-trustpilot__header-logo.icons-main.icons-main__trustpilot
+        .card-trustpilot__body=content
+
+
+mixin cardNews(img, date, title, content)
+    .card-news 
+        .card-news__header
+            img(src=img, alt="")
+        .card-news__body
+            .card-news__body-date=date
+            .card-news__body-title=title
+            .card-news__body-content=content
+
+
 mixin tabsLink(...items)
     ul.tabs-block__nav
         each item, index in items
-            li 
+            li
                 a(class=(index === 0 ? 'active-tab' : false) href="#")=item
 
  

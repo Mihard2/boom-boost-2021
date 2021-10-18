@@ -1,0 +1,25 @@
+extends ../../layout/content-block
+include ../../modules/mixins
+
+block variables
+    - sectionClass = "trustpilot"
+    - contentTitle = "trustpilot"
+    - linkContent = false
+    - trustHeader = true
+
+block trustHeader 
+    .truspilot-rating 
+        .truspilot-rating__logo.icons-main.icons-main__trustpilot-2
+        .truspilot-rating__values
+            .truspilot-rating__values-ratio 
+                span.ratio-big 5
+                span  / 5
+                |  based on 264 reviews
+
+block content
+    +cardTrust("static/img/cards/Frame.jpg","2021-07-09","Christian","Hands down the best service in the market. These guys are good and they are quick. Polite and professional, look no further your money is well spent here.Hands down the best service in the market. These guys are good and they are quick. Polite and professional, look no further your money is well spent here.")
+    +cardTrust("static/img/cards/Frame.jpg","2021-07-09","Christian","Hands down the best service in the market. These guys are good and they are quick. Polite and professional, look no further your money is well spent here.")
+    +cardTrust("static/img/cards/Frame.jpg","2021-07-09","Christian","Hands down the best service in the market. These guys are good and they are quick. Polite and professional, look no further your money is well spent here.")
+    +cardTrust("static/img/cards/Frame.jpg","2021-07-09","Christian","Hands down the best service in the market. These guys are good and they are quick. Polite and professional, look no further your money is well spent here.")
+    +cardTrust("static/img/cards/Frame.jpg","2021-07-09","Christian","Hands down the best service in the market. These guys are good and they are quick. Polite and professional, look no further your money is well spent here.")
+    +cardTrust("static/img/cards/Frame.jpg","2021-07-09","Christian","Hands down the best service in the market. These guys are good and they are quick. Polite and professional, look no further your money is well spent here.")

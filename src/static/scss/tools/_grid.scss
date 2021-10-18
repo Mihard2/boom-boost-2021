@@ -21,6 +21,7 @@
     }
     .content-block {
         flex: 1 auto;
+        max-width: calc(100% - 256px);
         section {
             padding-top: 100px;
         }

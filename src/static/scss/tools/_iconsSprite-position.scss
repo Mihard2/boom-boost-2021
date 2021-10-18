@@ -2,12 +2,14 @@
     background-image: url('/static/img/logo-icons/icons-main.png');
     background-size: auto 450%;
     background-repeat: no-repeat;
+
     &::before,
     &::after {
         background-image: url('/static/img/logo-icons/icons-main.png');
         background-size: auto 450%;
         background-repeat: no-repeat;
     }
+
     &__discord {
         background-position: 57% 36%;
 
@@ -31,61 +33,228 @@
             background-position: 87% 0%;
         }
     }
+
     &__login {
         background-image: none;
+
         &::before {
             background-position: 100% 36%;
         }
     }
+
     &__searche {
         background-size: auto 300%;
         background-position: 113% -10%;
     }
+
     &__cart {
         background-position: 100% 70%;
     }
+
     &__horde {
         background-position: 10.3% 36%;
     }
+
     &__alliance {
         background-position: 1% 36%;
     }
+    &__trustpilot {
+        background-size: auto 900%;
+        background-position: 0% 100%;
+    }
+    &__trustpilot-2 {
+        background-size: auto 900%;
+        background-position: 0% 85%;
+    }
 }
+
 .icons-game {
     background-image: url('/static/img/logo-icons/icons-game.png');
     background-size: auto 400%;
     background-repeat: no-repeat;
+
+    &::before,
+    &::after {
+        background-image: url('/static/img/logo-icons/icons-game.png');
+        background-size: auto 400%;
+        background-repeat: no-repeat;
+    }
+
     &__support {
         background-position: 89% 0;
     }
+
     &__reviews {
         background-position: 101% 0;
     }
+
     &__vpn {
         background-position: 89% 31%;
     }
+
     &__safe-data {
         background-position: 0 0;
     }
+
     &__money-back {
         background-position: 11% 0;
     }
+
     &__profi {
         background-position: 44.5% 0;
     }
-    &__leveling {
+
+    &__Leveling {
         background-position: 33% 0;
+
+        &::before {
+            background-position: 33% 0;
+        }
+
+        &::after {
+            background-position: 33% 68.5%;
+        }
     }
+
     &__WoWClassic {
-        background-position: 55.5% 0;
+        background-position: 55.5% -1%;
+
+        &::before {
+            background-position: 55.5% -1%;
+        }
+
+        &::after {
+            background-position: 55.5% 67.5%;
+        }
     }
+
     &__Mythic {
         background-position: 66.8% 31%;
+
+        &::before {
+            background-position: 66.8% 31%;
+        }
+
+        &::after {
+            background-position: 66.8% 100%;
+        }
     }
+    &__Accounts {
+        background-position: 66.8% 0;
+
+        &::before {
+            background-position: 66.8% 0;
+        }
+
+        &::after {
+            background-position: 66.8% 68.5%;
+        }
+    }
+
     &__PVPArenaRating {
         background-position: 22% 31%;
+
+        &::before {
+            background-position: 22% 31%;
+        }
+
+        &::after {
+            background-position: 22% 100%;
+        }
     }
+
     &__GladiatorArena {
         background-position: 22% 0;
+
+        &::before {
+            background-position: 22% 0;
+        }
+
+        &::after {
+            background-position: 22% 68.5%;
+        }
+    }
+
+    &__CoachingArena {
+        background-position: 22% 0;
+
+        &::before {
+            background-position: 22% 0;
+        }
+
+        &::after {
+            background-position: 22% 68.5%;
+        }
+    }
+
+    &__CastleNathria {
+        background-position: 0% 31%;
+
+        &::before {
+            background-position: 0% 31%;
+        }
+
+        &::after {
+            background-position: 0% 100%;
+        }
+    }
+
+    &__TorghastTower {
+        background-position: 33% 31%;
+
+        &::before {
+            background-position: 33% 31%;
+        }
+
+        &::after {
+            background-position: 33% 100%;
+        }
+    }
+
+    &__WoWMounts {
+        background-position: 11% 31%;
+
+        &::before {
+            background-position: 11% 31%;
+        }
+
+        &::after {
+            background-position: 11% 100%;
+        }
+    }
+
+    &__WoWRaidBoost {
+        background-position: 56% 31%;
+
+        &::before {
+            background-position: 56% 31%;
+        }
+
+        &::after {
+            background-position: 56% 100%;
+        }
+    }
+
+    &__ItemLevel {
+        background-position: 77% 31%;
+
+        &::before {
+            background-position: 77% 31%;
+        }
+
+        &::after {
+            background-position: 77% 100%;
+        }
+    }
+    &__RequestAService {
+        background-position: 77% 0;
+
+        &::before {
+            background-position: 77% 0;
+        }
+
+        &::after {
+            background-position: 77% 68.5%;
+        }
     }
 }

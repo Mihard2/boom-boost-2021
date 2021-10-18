@@ -3,10 +3,14 @@ include ../../modules/mixins
 
 block variables
     - sectionClass = "popular"
-    - contentTitle = 'popular services';
+    - contentTitle = 'popular services'
+    - linkContent = "check all categories"
 
+block headerLink 
+        +link(`${linkContent}`, '#', true)
+        
 block content
-    +cardPopular("leveling","leveling")
+    +cardPopular("Leveling","Leveling")
     +cardPopular("WoWClassic","WoW Classic")
     +cardPopular("Mythic","Mythic+")
     +cardPopular("PVPArenaRating","PVP Arena Rating")

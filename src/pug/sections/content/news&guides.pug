@@ -1,0 +1,20 @@
+extends ../../layout/content-block
+include ../../modules/mixins
+
+block variables
+    - sectionClass = "newsGuides"
+    - contentTitle = "recent news & guides"
+
+
+block content
+    .scroll-slider
+        .scroll-slider__wrapp        
+            +cardNews('static/img/cards/News.jpg','2021.09.10','WoW Shadowlands Is so Close to Release!','Now finally know the Shadowlands release date 24.11.2020. No more delays. This is it! You all know by now that everything will be different – new PvP Arena experience, more raids, improved PvE, completely original !!! PvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely original')
+            +cardNews('static/img/cards/Frame_1.jpg','2021.09.10','WoW Shadowlands!','Completely originalPvP Arena experience, more raids, improved PvE, completely original')
+            +cardNews('static/img/cards/News.jpg','2021.09.10','WoW Shadowlands Is so Close to Release! Close to Release!','Now finally know the Shadowlands release date 24.11.2020. No more delays. This is it! You all know by now that everything will be different – new PvP Arena experience, more raids, improved PvE, completely original !!! PvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely original')
+            +cardNews('static/img/cards/Frame_2.jpg','2021.09.10','WoW Shadowlands Is so Close to Release!','Now finally know the Shadowlands release date 24.11.2020. No more delays. This is it! You all know by now that everything will be different – new PvP Arena experience, more raids, improved PvE, completely original !!! PvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely original')
+            +cardNews('static/img/cards/News.jpg','2021.09.10','WoW Shadowlands Is so Close to Release!','Now finally know the Shadowlands release date 24.11.2020. No more delays. This is it! You all know by now that everything will be different – new PvP Arena experience, more raids, improved PvE, completely original !!! PvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely original')
+            +cardNews('static/img/cards/News.jpg','2021.09.10','WoW Shadowlands Is so Close to Release!','Now finally know the Shadowlands release date 24.11.2020. No more delays. This is it! You all know by now that everything will be different – new PvP Arena experience, more raids, improved PvE, completely original !!! PvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely original')
+            +cardNews('static/img/cards/News.jpg','2021.09.10','WoW Shadowlands Is so Close to Release!','Now finally know the Shadowlands release date 24.11.2020. No more delays. This is it! You all know by now that everything will be different – new PvP Arena experience, more raids, improved PvE, completely original !!! PvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely originalPvP Arena experience, more raids, improved PvE, completely original')
+        .scroll-slider__control 
+            input#slider-control(type="range", min="0", max="100", value="0", name="range")
