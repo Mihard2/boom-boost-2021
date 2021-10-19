@@ -4,23 +4,76 @@
     align-items: center;
     padding-top: 13px;
     padding-bottom: 13px;
-
+    
     &>* {
         margin-left: 1%;
         margin-right: 1%;
     }
+
+    .menu-link {
+        @include mq(sm) {
+            display: none;
+        }
+
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 24px;
+        min-width: 24px;
+        height: 20px;
+
+        span {
+            display: flex;
+            width: 100%;
+            height: 4px;
+            border-radius: 10px;
+            background-color: $mainColorFont;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            display: flex;
+            width: 100%;
+            height: 4px;
+            border-radius: 10px;
+            background-color: $mainColorFont;
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+    }
+
+    .logo {
+        @include mq(sm) {
+            display: none;
+        }
+
+        display: flex;
+        width: 59px;
+        min-width: 59px;
+        height: 27px;
+    }
+
     &__trust {
         display: flex;
         flex-direction: column;
-        @include mq(hd) {
-            display: none;
-        }
+
         &-stars {
             display: flex;
             align-items: flex-end;
             line-height: 100%;
             margin-bottom: 5px;
             font-weight: 700;
+            font-size: 14px;
+
             &-logo {
                 display: flex;
                 width: 110px;
@@ -28,9 +81,11 @@
                 margin-left: 10px;
             }
         }
+
         &-counter {
             display: flex;
             font-size: 14px;
+
             span {
                 font-size: 14px;
                 margin-left: 2%;
@@ -38,6 +93,7 @@
             }
         }
     }
+
     &__search {
         width: 370px;
         height: 47px;
@@ -74,6 +130,7 @@
             text-transform: uppercase;
             margin-bottom: 5px;
             font-weight: 600;
+            font-size: 14px;
         }
 
         &-wrapper {
@@ -121,6 +178,7 @@
             height: 100%;
             width: 100%;
             font-weight: 600;
+            font-size: 14px;
 
             &--active {
                 min-width: 86px;
@@ -158,11 +216,23 @@
 
         &-wrapp {
             display: flex;
+            flex-direction: column;
             align-items: center;
             font-weight: 600;
+            font-size: 14px;
+            @include mq(fhd) {
+                flex-direction: row;
+            }
+            a {
+                font-size: 14px;
+            }
 
             .separator {
                 padding: 0 5px;
+                display: none;
+                @include mq(fhd) {
+                    display: flex;
+                }
             }
         }
     }
@@ -196,6 +266,7 @@
         &-total {
             font-weight: 600;
             color: $darkColorFont;
+            font-size: 14px;
         }
     }
 }

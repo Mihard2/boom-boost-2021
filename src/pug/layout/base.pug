@@ -10,10 +10,10 @@ html(lang="en")
         title= pageTitle
     body
         .main-container(class=`page-${page}`)
-            include ../sections/sidebar-menu
+            //- include ../sections/sidebar-menu
 
             .content-block
                 include ../sections/header
                 block content
-                include base-footer
+                //- include base-footer
         script(defer src="static/js/main.js?v=1.0.2")
