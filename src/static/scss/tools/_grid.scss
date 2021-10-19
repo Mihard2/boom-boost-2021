@@ -1,29 +1,47 @@
 .container {
     padding-left: 68px;
     padding-right: 68px;
+    width: 100%;
 }
+
 .main-container {
     max-width: 1920px;
     margin: 0 auto;
     height: 100%;
     width: 100%;
     display: flex;
+
     .sidebar-block {
         width: 256px;
         min-width: 256px;
         display: flex;
         position: relative;
+
         .main-menu {
             position: fixed;
             top: 0;
             width: 256px;
         }
     }
+
     .content-block {
         flex: 1 auto;
         max-width: calc(100% - 256px);
+
+        &__trustpilot,
+        &__newsGuides,
+        &__faq,
+        &__process-work,
+        &__about-us,
+        &__sub-form {
+            .cards-wrapper {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
         section {
-            padding-top: 100px;
+            margin-bottom: 100px;
         }
     }
 }

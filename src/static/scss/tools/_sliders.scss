@@ -1,3 +1,19 @@
+.slider__wrapper {
+    overflow: hidden;
+    // width: calc(100% - 60px);
+    // margin: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.slider__item {
+    flex: 0 0 23%;
+    max-width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+
+
 .scroll-slider {
     display: flex;
     flex-direction: column;

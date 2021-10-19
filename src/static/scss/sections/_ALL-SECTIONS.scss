@@ -20,17 +20,20 @@
 .content-block__trustpilot {
     .content-block__header {
         align-items: center;
+
         .truspilot-rating {
             margin-left: 43px;
             flex: 1;
             height: 40px;
             display: flex;
             align-items: center;
+
             &__logo {
                 width: 241px;
                 height: 37px;
                 display: flex;
             }
+
             &__values {
                 border-left: 1px solid $borderColor;
                 margin-left: 30px;
@@ -38,16 +41,113 @@
                 height: 100%;
                 display: flex;
                 align-items: flex-end;
+
                 span {
                     font-size: 12px;
                     color: $greeText;
                     font-weight: 700;
+
                     &.ratio-big {
                         font-size: 40px;
                         line-height: 90%;
                     }
                 }
             }
+        }
+    }
+
+}
+
+.content-block__process-work {
+    .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .card-process {
+            max-width: 16%;
+        }
+        .step-road {
+            display: flex;
+            position: relative;
+            width: 87%;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            span {
+                display: flex;
+                border-radius: 3px;
+                width: 15px;
+                height: 15px;
+                background-color: $activeBg;
+
+                &:first-of-type,
+                &:last-child {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 5px;
+                    background-color: $activeColor;
+                }
+            }
+
+            &__line {
+                display: flex;
+                width: 100%;
+                left: 0;
+                top: 50%;
+                position: absolute;
+                border-bottom: 1px dashed $mainColorFont;
+                z-index: -1;
+            }
+        }
+    }
+
+}
+
+.about-us {
+    &__content {
+        position: relative;
+        max-height: 200px;
+        overflow: hidden;
+        p {
+            line-height: 150%;
+            margin-bottom: 20px;
+        }
+        &::after {
+            content: '';
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(180deg, #161616 0%, rgba(22, 22, 22, 0) 100%);
+            transform: matrix(1, 0, 0, -1, 0, 0);
+        }
+    }
+    &[data-open="true"] {
+        .about-us__content {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40px;
+        border-radius: 15px;
+        background-color: $borderColor;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        &:hover {
+            background-color: $activeColor;
+            color: $borderColor;
+            text-shadow: 0 0 1px $borderColor;
         }
     }
 

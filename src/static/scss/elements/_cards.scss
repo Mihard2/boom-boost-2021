@@ -1,7 +1,8 @@
 .cards-wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -.75%;
+    margin-left: -.75%;
+    margin-right: -.75%;
     min-width: 100%;
 
     .card {
@@ -278,6 +279,66 @@
                 }
                 &-content {
                     color: $mainColorFont2;
+                }
+            }
+        }
+        &-faq {
+            display: flex;
+            background-color: $activeBg;
+            padding: 38px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            &__title {
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 150%;
+                padding-right: 10%;
+                position: relative;
+                text-transform: uppercase;
+                letter-spacing: .12em;
+                margin-bottom: 20px;
+                &::before {
+                    content: '';
+                    display: flex;
+                    width: 20px;
+                    height: 20px;
+                    background-color: red;
+                    position: absolute;
+                    right: 0;
+                    top: calc(50% - 10px);
+                    cursor: pointer;
+                }
+            }
+            &__content {
+                padding-right: 10%;
+                line-height: 140%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.9s;
+            }
+        }
+        &-process {
+            display: flex;
+            padding-right: 15px;
+            &__index {
+                font-size: 80px;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 120%;
+                margin-right: 20px;
+            }
+            &__content {
+                &-title {
+                    text-transform: uppercase;
+                    line-height: 140%;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+                &-desc {
+                    font-size: 12px;
+                    line-height: 160%;
                 }
             }
         }

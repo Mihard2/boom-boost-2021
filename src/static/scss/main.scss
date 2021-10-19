@@ -5,6 +5,8 @@
 @import 'tools/fonts';
 @import 'tools/mq';
 @import 'tools/iconsSprite-position';
+@import 'tools/animations';
+@import 'tools/chief-slider';
 @import 'tools/sliders';
 
 //      ELEMENTS
@@ -12,9 +14,11 @@
 @import 'elements/header';
 @import 'elements/cards';
 @import 'elements/tabs';
+@import 'elements/forms';
 
 //      SECTIONS
 @import 'sections/ALL-SECTIONS';
 @import 'sections/top';
+@import 'sections/footer';
 // @import 'style/header';
 @import 'style/mainStyle';

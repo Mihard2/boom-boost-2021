@@ -1,0 +1,77 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 60px;
+
+    &__logo {
+        display: flex;
+        width: min-content;
+        height: min-content;
+    }
+
+    &__menu {
+        a {
+            margin-left: 6px;
+            margin-right: 6px;
+            padding-left: 6px;
+            padding-right: 6px;
+            font-weight: 500;
+            line-height: 140%;
+        }
+    }
+
+    &__payments {
+        display: flex;
+        align-items: center;
+        span {
+            margin-right: 7px;
+        }
+        .icons-main {
+            display: flex;
+            margin-left: 9px;
+            margin-right: 9px;
+
+            &.icons-main__bitcoin {
+                width: 91px;
+                height: 19px;
+            }
+
+            &.icons-main__mastercard {
+                width: 55px;
+                height: 34px;
+            }
+
+            &.icons-main__paypal {
+                width: 71px;
+                height: 19px;
+            }
+
+            &.icons-main__skrill {
+                width: 70px;
+                height: 25px;
+            }
+
+            &.icons-main__visa {
+                width: 59px;
+                height: 30px;
+            }
+        }
+    }
+
+    &__separator {
+        display: flex;
+        width: 100%;
+        margin-top: 14px;
+        margin-bottom: 14px;
+        border-bottom: 1px solid $borderColor;
+    }
+
+    &__policy {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

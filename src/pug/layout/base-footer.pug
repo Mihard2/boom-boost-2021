@@ -1,1 +1,19 @@
-script(defer src="static/js/main.js?v=1.0.2")
+footer.container.footer
+    a.footer__logo(href="/")
+        include ../modules/logo
+    .footer__menu
+        a(href="/") Blog
+        a(href="/") Contacts us
+        a(href="/") Work with us
+        a(href="/") FAQ 
+    .footer__payments 
+        span Payment methods: 
+        .icons-main.icons-main__bitcoin(href="/") 
+        .icons-main.icons-main__mastercard(href="/") 
+        .icons-main.icons-main__paypal(href="/") 
+        .icons-main.icons-main__skrill(href="/") 
+        .icons-main.icons-main__visa(href="/")  
+    .footer__separator   
+    .footer__policy 
+        a(href="/") Privacy policy
+        a(href="/") Terms and Conditions

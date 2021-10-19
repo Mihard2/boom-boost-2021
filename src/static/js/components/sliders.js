@@ -1,1 +1,4 @@
-console.log("100500");
+const slider = new ChiefSlider('.slider', {
+    loop: false
+});
+// const sliderControl = document.getElementById('con')

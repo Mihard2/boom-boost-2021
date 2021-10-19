@@ -8,7 +8,8 @@ block variables
 
 section.container(class=`content-block__${sectionClass}`)
     .content-block__header
-        h2.content-block__title=contentTitle
+        if contentTitle
+            h2.content-block__title=contentTitle
         if linkContent
             block headerLink
             

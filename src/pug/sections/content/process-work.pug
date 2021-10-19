@@ -1,0 +1,22 @@
+extends ../../layout/content-block
+include ../../modules/mixins
+
+block variables
+    - sectionClass = "process-work"
+    - contentTitle = "process of work"
+
+block content
+   +cardProcess('1','registration','Register for free and get a discount on your first purchase')
+   +cardProcess('2','DETAILS','Chat with the booster before paying and specify order details')
+   +cardProcess('3','PAYMENT','Place an order and pay for it. Your money is safe.')
+   +cardProcess('4','PROCESSING','Wait for the booster to finish your order.')
+   +cardProcess('5','CONFIRMATION','Confirm the order delivery. The booster gets paid only now.')
+   +cardProcess('6','REVIEW','Leave a review about the booster’s job to help others make the right choice.')
+   .step-road
+        .step-road__line
+        span
+        span
+        span
+        span
+        span
+        span

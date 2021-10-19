@@ -43,8 +43,8 @@
     }
 
     &__searche {
-        background-size: auto 300%;
-        background-position: 113% -10%;
+        background-size: auto 320%;
+        background-position: 45% 114%;
     }
 
     &__cart {
@@ -58,13 +58,40 @@
     &__alliance {
         background-position: 1% 36%;
     }
+
     &__trustpilot {
         background-size: auto 900%;
         background-position: 0% 100%;
     }
+
     &__trustpilot-2 {
         background-size: auto 900%;
         background-position: 0% 85%;
+    }
+
+    &__bitcoin {
+        background-size: auto 900%;
+        background-position: 0 69%;
+    }
+
+    &__mastercard {
+        background-size: auto 500%;
+        background-position: 26% 69%;
+    }
+
+    &__paypal {
+        background-size: auto 900%;
+        background-position: 46% 69%;
+    }
+
+    &__skrill {
+        background-size: auto 800%;
+        background-position: 68% 70%;
+    }
+
+    &__visa {
+        background-size: auto 600%;
+        background-position: 88% 71%;
     }
 }
 
@@ -139,6 +166,7 @@
             background-position: 66.8% 100%;
         }
     }
+
     &__Accounts {
         background-position: 66.8% 0;
 
@@ -246,6 +274,7 @@
             background-position: 77% 100%;
         }
     }
+
     &__RequestAService {
         background-position: 77% 0;
 

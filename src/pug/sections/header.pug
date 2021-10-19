@@ -1,5 +1,12 @@
 .container.header 
-    .header__trust trustpilot 
+    a.header__trust(href="/")
+        .header__trust-stars TrustPilot
+            .header__trust-stars-logo.icons-main.icons-main__trustpilot-2
+        .header__trust-counter TrustScore  
+         span  9.8  
+         | Reviews 
+         span  484 
+
     form.header__search 
         input(type="text", name="search-form", id="search-form", placeholder="I look for...")
         input.icons-main.icons-main__searche(type="submit", value="")

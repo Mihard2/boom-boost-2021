@@ -79,6 +79,7 @@ mixin cardAdvantages(className, title, desc)
             .card-advantages__content-title=title
             .card-advantages__content-desc=desc
 
+
 mixin cardPopular(className, content)
     .card-popular
         .card-popular__title=content
@@ -86,7 +87,7 @@ mixin cardPopular(className, content)
 
 
 mixin cardTrust(img, date, name, content, logo)
-    .card-trustpilot 
+    .card-trustpilot.slider__item 
         .card-trustpilot__header
             .card-trustpilot__header-icon
                 img(src=img, alt="")
@@ -105,6 +106,20 @@ mixin cardNews(img, date, title, content)
             .card-news__body-date=date
             .card-news__body-title=title
             .card-news__body-content=content
+
+
+mixin cardFaq(title, content)
+    .card-faq.adaptHeight
+        .card-faq__title.adaptHeight__link=title 
+        .card-faq__content.adaptHeight__content=content 
+
+
+mixin cardProcess(index, title, desc)
+    .card-process(class=`card-process-${index}`)
+        .card-process__index=index
+        .card-process__content
+            .card-process__content-title=title
+            .card-process__content-desc=desc
 
 
 mixin tabsLink(...items)
