@@ -1,11 +1,16 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  var heightTopMenu = document.querySelector('.header-mobile').offsetHeight;
+  document.querySelector('.content-block').style.marginTop = "".concat(heightTopMenu, "px");
+  document.querySelector('.header__support-fixed').style.top = "".concat(heightTopMenu + 30, "px");
+  ;
   /**
   * ChiefSlider by Itchief v2.0.0 (https://github.com/itchief/ui-components/tree/master/simple-adaptive-slider)
   * Copyright 2020 - 2021 Alexander Maltsev
   * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
   */
+
   (function () {
     if (typeof window.CustomEvent === 'function') return false;
 
@@ -604,9 +609,14 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   ;
-  var slider = new ChiefSlider('.slider', {
-    loop: false
-  }); // const sliderControl = document.getElementById('con');
+  var sliderBlock = document.querySelector('.slider');
+
+  if (sliderBlock) {
+    var slider = new ChiefSlider('.slider', {
+      loop: false
+    });
+  } // const sliderControl = document.getElementById('con');
+
 
   var smoothHeight = function smoothHeight(itemSelector, buttonSelector, contentSelector) {
     // объявляем основную функцию, которая принимает в качестве параметров селекторы элемента, кнопки внутри элемента и блока с контентом

@@ -4,27 +4,46 @@
 
     &__nav {
         display: flex;
-        margin-right: 50px;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
         background-color: $activeBg;
         border-radius: 15px;
 
+        &:last-of-type {
+            margin-bottom: 60px;
+        }
+
+        @include mq(fhd) {
+            margin-right: 50px;
+            margin-bottom: 60px;
+        }
+
         li {
             a {
+                font-size: 9px;
                 display: flex;
-                padding: 13px 21px;
+                padding: 8px 13px;
                 font-weight: 600;
-                font-size: 14px;
                 border-radius: 15px;
 
                 &.active-tab {
                     background-color: $bgRed;
-                    padding-left: 33px;
-                    padding-right: 33px;
+                    padding-left: 21px;
+                    padding-right: 21px;
                     pointer-events: none;
                 }
+
                 &:hover {
                     background-color: $bgRed;
+                }
+
+                @include mq(fhd) {
+                    font-size: 14px;
+                    padding: 13px 21px;
+
+                    &.active-tab {
+                        padding-left: 33px;
+                        padding-right: 33px;
+                    }
                 }
             }
         }

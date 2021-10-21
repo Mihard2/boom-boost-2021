@@ -43,8 +43,14 @@
     }
 
     &__searche {
-        background-size: auto 320%;
-        background-position: 45% 114%;
+        background-size: auto 400%;
+        background-position: 46% 108%;
+
+        @include mq(fhd) {
+            background-size: auto 320%;
+            background-position: 45% 114%;
+        }
+
     }
 
     &__cart {

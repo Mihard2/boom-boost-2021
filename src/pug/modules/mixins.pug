@@ -129,8 +129,8 @@ mixin tabsLink(...items)
                 a(class=(index === 0 ? 'active-tab' : false) href="#")=item
 
  
-mixin link(content, href, transperent)
+mixin link(content, href, transperent, allContent)
     if transperent
-        a.link(class="link-bg--transparent" href=`${href}`)=content
+        a.link(class=`link-bg--transparent ${allContent}` href=`${href}`)=content
     else
-        a.link(class="link-bg" href=`${href}`)=content
+        a.link(class=`link-bg ${allContent}` href=`${href}`)=content

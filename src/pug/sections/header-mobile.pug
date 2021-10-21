@@ -1,0 +1,29 @@
+.container.header.header-mobile
+    a.menu-link 
+        span
+    
+    a.logo(href="/")
+        include ../modules/logo
+    
+    .header__currency
+        a.header__currency-switch.header__currency-switch--active(href="#") EU 
+        a.header__currency-switch(href="#") USA 
+    
+    a.header__login(href="/")
+        .header__login-icon.icons-main.icons-main__login
+    
+    a.header__cart.link.link-bg(href="#")
+        .header__cart-counter.icons-main.icons-main__cart
+            span.header__cart-counterTotal 3
+        .header__cart-total €675
+    
+    form.header__search 
+        input(type="text", name="search-form", id="search-form", placeholder="I look for...")
+        input.icons-main.icons-main__searche(type="submit", value="")
+
+.header__support-fixed
+    .header__support-wrapper
+        a.header__support-link.icons-main.icons-main__skype(href="#") 
+        a.header__support-link.icons-main.icons-main__instagram(href="#") 
+        a.header__support-link.icons-main.icons-main__discord(href="#") 
+    .header__support-title support 24/7
