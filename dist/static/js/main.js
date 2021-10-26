@@ -4,6 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
   var heightTopMenu = document.querySelector('.header-mobile').offsetHeight;
   document.querySelector('.content-block').style.marginTop = "".concat(heightTopMenu, "px");
   document.querySelector('.header__support-fixed').style.top = "".concat(heightTopMenu + 30, "px");
+  var openMenu = document.querySelector('.menu-link__open');
+  var closeMenu = document.querySelector('.menu-link__close');
+  var menu = document.querySelector('.sidebar-block');
+  openMenu.addEventListener('click', function () {
+    menu.animate({
+      right: '0%'
+    }, {
+      duration: 1000,
+      fill: 'forwards'
+    });
+  });
+  closeMenu.addEventListener('click', function () {
+    menu.animate({
+      right: '100%'
+    }, {
+      duration: 1000,
+      fill: 'forwards'
+    });
+  });
   ;
   /**
   * ChiefSlider by Itchief v2.0.0 (https://github.com/itchief/ui-components/tree/master/simple-adaptive-slider)

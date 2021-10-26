@@ -2,14 +2,22 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: flex-start;
         margin-bottom: 50px;
 
         @include mq(sm) {
             margin-bottom: 60px;
 
             h2 {
-                max-width: 60%;
+                flex: 1;
+                margin-right: 10%;
+                // max-width: 60%;
+            }
+
+            .link {
+                max-width: 130px;
+                padding-top: 8px;
+                padding-bottom: 8px;
             }
         }
     }
@@ -24,14 +32,14 @@
 
 .content-block__trustpilot {
     .content-block__header {
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
 
         .truspilot-rating {
-            margin-left: 43px;
             flex: 1;
             height: 40px;
             display: flex;
-            align-items: center;
+            flex-direction: column;
 
             &__logo {
                 width: 241px;
@@ -40,24 +48,54 @@
             }
 
             &__values {
-                border-left: 1px solid $borderColor;
-                margin-left: 30px;
-                padding-left: 40px;
                 height: 100%;
                 display: flex;
                 align-items: flex-end;
 
-                span {
-                    font-size: 12px;
-                    color: $greeText;
-                    font-weight: 700;
+                &-ratio {
+                    font-size: 14px;
 
-                    &.ratio-big {
-                        font-size: 40px;
-                        line-height: 90%;
+                    span {
+                        font-size: 9px;
+                        color: $greeText;
+                        font-weight: 700;
+
+                        &.ratio-big {
+                            font-size: 40px;
+                            line-height: 90%;
+                        }
+                    }
+                }
+
+
+            }
+        }
+        @include mq(fhd) {
+            align-items: center;
+
+            .truspilot-rating {
+                margin-left: 43px;
+                align-items: center;
+
+                &__values {
+                    border-left: 1px solid $borderColor;
+                    margin-left: 30px;
+                    padding-left: 40px;
+
+                    &-ratio {
+                        font-size: 16px;
+
+                        span {
+                            font-size: 12px;
+
+                            &.ratio-big {
+                                font-size: 32px;
+                            }
+                        }
                     }
                 }
             }
+
         }
     }
 
@@ -66,28 +104,27 @@
 .content-block__process-work {
     .cards-wrapper {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        .card-process {
-            max-width: 16%;
-        }
+        flex-direction: column;
+        padding-left: 65px;
+        position: relative;
 
         .step-road {
             display: flex;
-            position: relative;
-            width: 87%;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-top: 6%;
+            height: 87%;
+            justify-content: space-between;
 
             span {
                 display: flex;
                 border-radius: 3px;
                 width: 15px;
                 height: 15px;
-                background-color: $activeBg;
+                background-color: $borderColor;
 
                 &:first-of-type,
                 &:last-child {
@@ -100,16 +137,42 @@
 
             &__line {
                 display: flex;
-                width: 100%;
-                left: 0;
-                top: 50%;
                 position: absolute;
-                border-bottom: 1px dashed $mainColorFont;
+                height: 100%;
+                top: 0;
+                left: 50%;
+                border-left: 1px dashed $mainColorFont;
                 z-index: -1;
             }
         }
-    }
 
+        @include mq(fhd) {
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .card-process {
+                max-width: 16%;
+            }
+
+            .step-road {
+                position: relative;
+                width: 87%;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 30px;
+                margin-bottom: 30px;
+
+                &__line {
+                    width: 100%;
+                    left: 0;
+                    top: 50%;
+                    border-bottom: 1px dashed $mainColorFont;
+                    z-index: -1;
+                }
+            }
+        }
+    }
 }
 
 .about-us {

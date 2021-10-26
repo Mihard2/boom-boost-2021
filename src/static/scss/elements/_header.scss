@@ -12,18 +12,11 @@
         left: 0;
         width: 100%;
         background-color: $mainBg;
-        z-index: 10;
-        @include mq(sm) {
-            display: none;
-        }
+        z-index: 100;
     }
 
     &-desctop {
         display: none;
-
-        @include mq(sm) {
-            display: flex;
-        }
     }
 
     &>* {
@@ -32,9 +25,6 @@
     }
 
     .menu-link {
-        @include mq(sm) {
-            display: none;
-        }
 
         display: flex;
         align-items: center;
@@ -73,10 +63,6 @@
     }
 
     .logo {
-        @include mq(sm) {
-            display: none;
-        }
-
         display: flex;
         width: 59px;
         min-width: 59px;
@@ -85,7 +71,9 @@
 
     &__trust {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 80%;
 
         &-stars {
             display: flex;
@@ -118,7 +106,8 @@
     }
 
     &__search {
-        width: 250px;
+        min-width: 250px;
+        width: 70%;
         height: 18px;
         display: flex;
         background-color: $activeBg;
@@ -205,6 +194,7 @@
                 }
             }
         }
+
         &-fixed {
             position: fixed;
             right: -32px;
@@ -212,13 +202,17 @@
             border-radius: 10px 10px 0 0;
             background-color: $mainBg;
             transform: rotate(-90deg);
+            z-index: 100;
+
             .header__support-title {
                 margin-top: 6px;
                 font-size: 10px;
                 text-align: center;
             }
+
             .header__support-wrapper {
                 min-width: 90px;
+
                 .header__support-link {
                     width: 24px;
                     height: 22px;
@@ -325,11 +319,12 @@
     }
 
     &__cart {
-        
+
         &.link {
             padding: 6px 5px;
             width: max-content;
             border-radius: 9px;
+
             @include mq(fhd) {
                 border-radius: 15px;
                 padding: 10px 16px;
@@ -368,6 +363,104 @@
 
             @include mq(fhd) {
                 font-size: 14px;
+            }
+        }
+    }
+
+    @include mq(sm) {
+        &-mobile {
+            display: none;
+        }
+
+        &-desctop {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu-link {
+            display: none;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        &__support-fixed {
+            display: none;
+        }
+
+        &__trust {
+            order: 0;
+            flex-direction: column;
+            &-stars {
+                flex-direction: column;
+                align-items: flex-start;
+
+                &-logo {
+                    margin-left: 0;
+                    margin-top: 4px;
+                }
+            }
+
+            &-counter {
+                font-size: 9px;
+
+                span {
+                    font-size: 9px;
+                }
+            }
+        }
+
+        &__currency {
+            order: 1;
+
+            &-switch {
+                font-size: 14px;
+                border-radius: 15px;
+                padding: 13px 10px;
+                &-active {
+                    border-radius: 15px;
+                }
+            }
+        }
+
+        &__login {
+            order: 2;
+            &-icon {
+                width: 36px;
+                height: 36px;
+            }
+            &-wrapp {
+                display: none;
+            }
+        }
+
+        &__cart {
+            order: 3;
+            padding: 10px 16px;
+            &-counter{
+                width: 28px;
+                height: 28px;
+            }
+            &-total {
+                font-size: 14px;
+            }
+        }
+
+        &__search {
+            order: 4;
+            width: auto;
+            height: 25px;
+        }
+
+        &__support {
+            display: flex;
+            align-items: center;
+            order: 5;
+            margin-top: 18px;
+            &-title {
+                margin-right: 8px;
+                margin-bottom: 0;
             }
         }
     }

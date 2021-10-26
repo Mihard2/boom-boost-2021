@@ -1,6 +1,7 @@
 .tabs-block {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
 
     &__nav {
         display: flex;
@@ -19,7 +20,7 @@
 
         li {
             a {
-                font-size: 9px;
+                @include adaptiv-font(9, 14);
                 display: flex;
                 padding: 8px 13px;
                 font-weight: 600;
@@ -36,8 +37,15 @@
                     background-color: $bgRed;
                 }
 
-                @include mq(fhd) {
-                    font-size: 14px;
+
+            }
+        }
+    }
+
+    @include mq(sm) {
+        &__nav {
+            li {
+                a {
                     padding: 13px 21px;
 
                     &.active-tab {

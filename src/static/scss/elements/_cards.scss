@@ -1,7 +1,9 @@
 .cards-wrapper {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-left: -.75%;
     margin-right: -.75%;
     min-width: 100%;
@@ -18,10 +20,6 @@
             justify-content: space-between;
             border-radius: 15px;
             border: 1px solid $borderColor;
-
-            @include mq(fhd) {
-                width: 23.5%;
-            }
 
             &__image {
                 border-radius: 15px;
@@ -57,8 +55,22 @@
                         text-decoration: line-through;
                     }
                 }
+            }
 
-                @include mq(fhd) {
+            &__more {
+                width: calc(100% + 2px);
+                max-width: none;
+                margin-left: -1px;
+                margin-bottom: -1px;
+                margin-right: -1px;
+            }
+            @include mq(sm) {
+                width: 46.5%;
+            }
+            @include mq(fhd) {
+                width: 23.5%;
+
+                &__price-block {
                     font-size: 24px;
 
                     span {
@@ -69,14 +81,6 @@
                         font-size: 16px;
                     }
                 }
-            }
-
-            &__more {
-                width: calc(100% + 2px);
-                max-width: none;
-                margin-left: -1px;
-                margin-bottom: -1px;
-                margin-right: -1px;
             }
         }
 
@@ -89,10 +93,6 @@
             justify-content: space-between;
             border: 1px solid $borderColor;
             border-radius: 15px;
-
-            @include mq(fhd) {
-                width: 23.5%;
-            }
 
             &__head {
                 background-color: $activeBg;
@@ -123,15 +123,6 @@
                     font-size: 26px;
                     font-weight: 700;
                     line-height: 150%;
-                }
-
-                @include mq(fhd) {
-                    padding-left: 25px;
-                    padding-right: 25px;
-
-                    &-time {
-                        font-size: 32px;
-                    }
                 }
             }
 
@@ -192,6 +183,27 @@
                 margin-left: -1px;
                 margin-right: -1px;
                 margin-bottom: -1px;
+            }
+            @include mq(sm) {
+                width: 46.5%;
+                &--active {
+                    width: 98.5%;
+                }
+                &__head {
+                    padding-left: 16px;
+                    padding-right: 16px;
+
+                    &-time {
+                        font-size: 32px;
+                    }
+                }
+            }
+            @include mq(fhd) {
+                width: 23.5%;
+                &__head {
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
             }
         }
 
@@ -311,7 +323,7 @@
             background-color: $activeBg;
             border-radius: 15px;
             padding: 15px;
-            min-height: 230px;
+            min-height: 260px;
 
             &__header {
                 display: flex;
@@ -320,9 +332,9 @@
 
                 &-icon {
                     display: flex;
-                    width: 48px;
-                    height: 48px;
-                    border-radius: 10px;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 5px;
                     overflow: hidden;
 
                     img {
@@ -338,26 +350,57 @@
                     margin-right: 20px;
                 }
 
+                &-data,
+                &-name {
+                    font-size: 9px;
+                }
+
                 &-logo {
                     display: flex;
-                    width: 116px;
-                    height: 20px;
+                    width: 69px;
+                    height: 11px;
                 }
             }
 
             &__body {
-                max-height: 106px;
+                max-height: 171px;
                 overflow: auto;
+            }
+
+            @include mq(fhd) {
+                min-height: 230px;
+
+                &__header {
+                    &-icon {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 10px;
+                    }
+
+                    &-data,
+                    &-name {
+                        font-size: 16px;
+                    }
+
+                    &-logo {
+                        width: 116px;
+                        height: 20px;
+                    }
+                }
+
+                &__body {
+                    max-height: 106px;
+                }
             }
         }
 
         &-news {
             background-color: $activeBg;
-            border-radius: 15px;
+            border-radius: 7px;
 
             &__header {
                 width: 100%;
-                border-radius: 15px;
+                border-radius: 7px;
                 overflow: hidden;
                 margin-bottom: 14px;
 
@@ -367,19 +410,20 @@
             }
 
             &__body {
-                padding-left: 33px;
-                padding-right: 33px;
-                padding-bottom: 33px;
+                padding-left: 14px;
+                padding-right: 14px;
+                padding-bottom: 14px;
                 display: flex;
                 flex-direction: column;
 
                 &-date {
                     opacity: 0.5;
                     margin-bottom: 14px;
+                    font-size: 8px;
                 }
 
                 &-title {
-                    font-size: 25px;
+                    font-size: 12px;
                     font-weight: 900;
                     text-transform: uppercase;
                     margin-bottom: 14px;
@@ -387,6 +431,34 @@
 
                 &-content {
                     color: $mainColorFont2;
+                    font-size: 14px;
+                }
+            }
+
+            @include mq(fhd) {
+                border-radius: 15px;
+
+                &__header {
+                    border-radius: 15px;
+                    margin-bottom: 18px;
+                }
+
+                &__body {
+                    padding-left: 33px;
+                    padding-right: 33px;
+                    padding-bottom: 33px;
+
+                    &-date {
+                        font-size: 16px;
+                    }
+
+                    &-title {
+                        font-size: 25px;
+                    }
+
+                    &-content {
+                        font-size: 16px;
+                    }
                 }
             }
         }
@@ -394,17 +466,20 @@
         &-faq {
             display: flex;
             background-color: $activeBg;
-            padding: 38px;
+            padding-top: 36px;
+            padding-bottom: 30px;
+            padding-left: 7px;
+            padding-right: 7px;
             border-radius: 15px;
             display: flex;
             flex-direction: column;
             margin-bottom: 30px;
 
             &__title {
-                font-size: 25px;
+                font-size: 18px;
                 font-weight: 700;
                 line-height: 150%;
-                padding-right: 10%;
+                padding-right: 7%;
                 position: relative;
                 text-transform: uppercase;
                 letter-spacing: .12em;
@@ -430,11 +505,21 @@
                 overflow: hidden;
                 transition: max-height 0.9s;
             }
+
+            @include mq(fhd) {
+                padding: 38px;
+
+                &__title {
+                    font-size: 25px;
+                    padding-right: 10%;
+                }
+            }
         }
 
         &-process {
             display: flex;
             padding-right: 15px;
+            margin-bottom: 60px;
 
             &__index {
                 font-size: 80px;

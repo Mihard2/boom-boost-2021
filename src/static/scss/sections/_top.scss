@@ -3,11 +3,6 @@
     padding-bottom: 50px;
     margin-bottom: 34px;
 
-    @include mq(fhd) {
-        padding-top: 50px;
-        margin-bottom: 100px;
-    }
-
     .trust-support {
         margin-bottom: 27px;
         position: relative;
@@ -16,42 +11,28 @@
         width: 100%;
     }
 
+    .link {
+        max-width: 260px;
+    }
+
     &--main {
         min-height: 560px;
         background-image: url('/static/img/bg/bg-topMain.jpg');
         background-position: top center;
         background-size: auto 100%;
         background-repeat: no-repeat;
-
-        @include mq(fhd) {
-            .top__content {
-                padding-top: 50px;
-                background-image: url('/static/img/logo-icons/logo-mainTop.png');
-                background-repeat: no-repeat;
-                background-position: 95% 0;
-                background-size: auto 100%;
-            }
-        }
     }
 
     &__content {
-
-        h1,
-        .description {
-            @include mq(fhd) {
-                width: 42%;
-            }
+        &>.link {
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .description {
             letter-spacing: 0.4px;
             margin-bottom: 30px;
             font-weight: 300;
-
-            @include mq(fhd) {
-                margin-bottom: 43px;
-
-            }
         }
 
         &>.link {
@@ -86,7 +67,6 @@
 
             &__timer {
                 display: flex;
-                margin: 0 33px;
                 background-color: $bgRed;
                 border-radius: 5px;
                 padding: 8px 12px;
@@ -95,6 +75,50 @@
                 span {
                     margin: 0 7px;
                 }
+            }
+        }
+    }
+
+    @include mq(sm) {
+        .trust-support {
+            display: none;
+        }
+
+        .event {
+            align-items: flex-start;
+        }
+
+        &__content {
+            &>.link {
+
+                margin-left: 0;
+            }
+        }
+    }
+
+    @include mq(fhd) {
+        padding-top: 50px;
+        margin-bottom: 100px;
+
+        &--main {
+            .top__content {
+                padding-top: 50px;
+                background-image: url('/static/img/logo-icons/logo-mainTop.png');
+                background-repeat: no-repeat;
+                background-position: 95% 0;
+                background-size: auto 100%;
+            }
+        }
+
+        h1,
+        .description {
+            width: 42%;
+        }
+
+        &__content {
+            .description {
+                margin-bottom: 43px;
+
             }
         }
     }

@@ -24,10 +24,19 @@
     &__wrapp {
         display: flex;
         margin-bottom: 20px;
+        overflow-x: auto;
 
         .card-news {
-            min-width: 35%;
-            margin-right: 50px;
+            min-width: 80%;
+            margin-right: 14px;
+        }
+    }
+    @include mq(fhd) {
+        &__wrapp {
+            .card-news {
+                min-width: 35%;      
+                margin-right: 50px;
+            }
         }
     }
 

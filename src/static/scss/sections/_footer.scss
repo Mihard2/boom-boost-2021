@@ -7,14 +7,30 @@
 
     &__logo {
         display: flex;
-        width: min-content;
-        height: min-content;
+        width: 168px;
+        height: 76px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 37px;
+        order: 1;
+        // width: min-content;
+        // height: min-content;
     }
 
     &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        order: 2;
         a {
+            text-align: center;
+            width: 100%;
             margin-left: 6px;
             margin-right: 6px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 17px;
             padding-left: 6px;
             padding-right: 6px;
             font-weight: 500;
@@ -24,38 +40,55 @@
 
     &__payments {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        order: 4;
         span {
             margin-right: 7px;
+            width: 100%;
+            font-weight: 600;
         }
         .icons-main {
             display: flex;
-            margin-left: 9px;
-            margin-right: 9px;
+            margin-top: 7px;
+            margin-left: 4px;
+            margin-right: 4px;
+            // margin-left: 9px;
+            // margin-right: 9px;
 
             &.icons-main__bitcoin {
-                width: 91px;
-                height: 19px;
+                width: 57px;
+                height: 12px;
+                // width: 91px;
+                // height: 19px;
             }
 
             &.icons-main__mastercard {
-                width: 55px;
-                height: 34px;
+                width: 37px;
+                height: 17px;
+                // width: 55px;
+                // height: 34px;
             }
 
             &.icons-main__paypal {
-                width: 71px;
-                height: 19px;
+                width: 45px;
+                height: 12px;
+                // width: 71px;
+                // height: 19px;
             }
 
             &.icons-main__skrill {
-                width: 70px;
-                height: 25px;
+                width: 38px;
+                height: 12px;
+                // width: 70px;
+                // height: 25px;
             }
 
             &.icons-main__visa {
-                width: 59px;
-                height: 30px;
+                width: 37px;
+                height: 19px;
+                // width: 59px;
+                // height: 30px;
             }
         }
     }
@@ -66,12 +99,36 @@
         margin-top: 14px;
         margin-bottom: 14px;
         border-bottom: 1px solid $borderColor;
+        order: 3;
     }
 
     &__policy {
         margin-top: 20px;
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        order: 5;
+        a {
+            text-align: center;
+            line-height: 100%;
+            font-weight: 60;
+            width: max-content;
+            font-weight: 600;
+            margin-bottom: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            &:first-child {
+                padding-right: 7px;
+                border-right: 2px solid #fff;
+            }
+        }
+    }
+    @include mq(fhd) {
+    &__menu {
+        a {
+            margin-bottom: 0;
+        }
+    }
     }
 }
