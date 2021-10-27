@@ -145,7 +145,12 @@
                 z-index: -1;
             }
         }
-
+        @include mq(sm) {
+            padding-left: 0;
+            .step-road {
+                left: calc(50% - 30px);
+            }
+        }
         @include mq(fhd) {
             flex-wrap: wrap;
             flex-direction: row;
