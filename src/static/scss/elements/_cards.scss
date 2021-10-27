@@ -542,6 +542,14 @@
                     line-height: 160%;
                 }
             }
+            @include mq(sm) {
+               &:nth-child(odd) {
+                   margin-right: 55%;
+               }
+               &:nth-child(even) {
+                   margin-left: 55%;
+               }
+            }
         }
     }
 }
