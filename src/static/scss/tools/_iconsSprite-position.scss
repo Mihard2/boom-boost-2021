@@ -46,6 +46,11 @@
         background-size: auto 400%;
         background-position: 46% 108%;
 
+        @include mq(lg) {
+            background-size: auto 250%;
+            background-position: 45% 122%
+        }
+
         @include mq(fhd) {
             background-size: auto 320%;
             background-position: 45% 114%;

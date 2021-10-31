@@ -23,6 +23,7 @@
         align-items: center;
         width: 100%;
         order: 2;
+
         a {
             text-align: center;
             width: 100%;
@@ -43,11 +44,13 @@
         flex-wrap: wrap;
         align-items: center;
         order: 4;
+
         span {
             margin-right: 7px;
             width: 100%;
             font-weight: 600;
         }
+
         .icons-main {
             display: flex;
             margin-top: 7px;
@@ -109,6 +112,7 @@
         flex-direction: column;
         justify-content: center;
         order: 5;
+
         a {
             text-align: center;
             line-height: 100%;
@@ -118,17 +122,52 @@
             margin-bottom: 5px;
             margin-left: auto;
             margin-right: auto;
+
             &:first-child {
                 padding-right: 7px;
                 border-right: 2px solid #fff;
             }
         }
     }
-    @include mq(fhd) {
-    &__menu {
-        a {
+
+    @include mq(sm) {
+        &__logo {
+            margin-left: 0;
+            margin-right: 0;
             margin-bottom: 0;
         }
+
+        &__menu {
+            flex: 1;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 40%;
+            justify-content: flex-end;
+
+            a {
+                width: auto;
+                margin-bottom: 0;
+            }
+        }
+
+        &__policy {
+            flex: 1;
+            margin-top: 0;
+            a {
+                margin-left: 0;                
+            }
+        }
+        &__payments {
+            flex: 1;
+            order: 6;
+        }
     }
+
+    @include mq(fhd) {
+        &__menu {
+            a {
+                margin-bottom: 0;
+            }
+        }
     }
 }
