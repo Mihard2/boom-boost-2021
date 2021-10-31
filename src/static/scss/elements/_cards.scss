@@ -67,6 +67,9 @@
             @include mq(sm) {
                 width: 46.5%;
             }
+            @include mq(lg) {
+                width: 31.5%;
+            }
             @include mq(fhd) {
                 width: 23.5%;
 
