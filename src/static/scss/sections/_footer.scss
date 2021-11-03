@@ -153,21 +153,91 @@
         &__policy {
             flex: 1;
             margin-top: 0;
+
             a {
-                margin-left: 0;                
+                margin-left: 0;
             }
         }
+
         &__payments {
             flex: 1;
             order: 6;
         }
     }
 
-    @include mq(fhd) {
+    @include mq(lg) {
         &__menu {
             a {
                 margin-bottom: 0;
             }
+        }
+
+        &__payments {
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            span {
+                width: auto;
+            }
+        }
+
+        &__policy {
+            flex-direction: row;
+            justify-content: flex-start;
+            flex: 0;
+
+            a {
+                margin-right: 5px;
+            }
+        }
+
+        .icons-main {
+            margin-left: 9px;
+            margin-right: 9px;
+
+            &.icons-main__bitcoin {
+                width: 91px;
+                height: 19px;
+            }
+
+            &.icons-main__mastercard {
+                width: 55px;
+                height: 34px;
+            }
+
+            &.icons-main__paypal {
+                width: 71px;
+                height: 19px;
+            }
+
+            &.icons-main__skrill {
+                width: 70px;
+                height: 25px;
+            }
+
+            &.icons-main__visa {
+                width: 59px;
+                height: 30px;
+            }
+        }
+    }
+    @include mq(hd) {
+        &__payments {
+            order: 3;
+            margin-bottom: 20px;
+        }
+        &__menu {
+            justify-content: center;
+        }
+        &__policy {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 16px;
+        }
+    }
+    @include mq(fhd) {
+        &__payments {
+            flex: inherit;
         }
     }
 }

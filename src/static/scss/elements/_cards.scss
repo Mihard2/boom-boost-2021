@@ -33,6 +33,7 @@
                 flex: 1 0 auto;
                 font-size: 14px;
                 font-weight: 600;
+                line-height: 150%;
             }
 
             &__price-block {
@@ -64,15 +65,19 @@
                 margin-bottom: -1px;
                 margin-right: -1px;
             }
+
             @include mq(sm) {
                 width: 46.5%;
             }
+
             @include mq(lg) {
                 width: 31.5%;
-            }
-            @include mq(fhd) {
-                width: 23.5%;
-
+                &__title {
+                    font-size: 16px;
+                }
+                &__title {
+                    font-size: 16px;
+                }
                 &__price-block {
                     font-size: 24px;
 
@@ -84,6 +89,11 @@
                         font-size: 16px;
                     }
                 }
+            }
+
+            @include mq(hd) {
+                width: 23.5%;
+
             }
         }
 
@@ -187,11 +197,14 @@
                 margin-right: -1px;
                 margin-bottom: -1px;
             }
+
             @include mq(sm) {
                 width: 46.5%;
+
                 &--active {
                     width: 98.5%;
                 }
+
                 &__head {
                     padding-left: 16px;
                     padding-right: 16px;
@@ -201,8 +214,29 @@
                     }
                 }
             }
+
+            @include mq(lg) {
+                width: 31.5%;
+            }
+
+            @include mq(hd) {
+                width: 23.5%;
+
+                &__head {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                &__body {
+                    &-desc {
+                        &--wrapp {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
             @include mq(fhd) {
                 width: 23.5%;
+
                 &__head {
                     padding-left: 25px;
                     padding-right: 25px;
@@ -243,6 +277,26 @@
                 &-desc {
                     font-size: 9px;
                     line-height: 140%;
+                }
+            }
+
+            @include mq(lg) {
+                width: 48.5%;
+
+                &__icon {
+                    width: 106px;
+                    height: 106px;
+                    margin-right: 20px;
+                }
+
+                &__content {
+                    &-title {
+                        font-size: 16px;
+                    }
+
+                    &-desc {
+                        font-size: 16px;
+                    }
                 }
             }
 
@@ -302,7 +356,7 @@
                 }
             }
 
-            @include mq(fhd) {
+            @include mq(lg) {
                 width: 17%;
                 margin-left: 0.75%;
                 margin-right: 0.75%;
@@ -318,6 +372,11 @@
                     &.icons-game__Mythic {
                         width: 126px;
                     }
+                }
+
+                &:last-of-type {
+                    margin-bottom: 4%;
+                    padding-bottom: 37px;
                 }
             }
         }
@@ -369,7 +428,23 @@
                 max-height: 171px;
                 overflow: auto;
             }
-
+            @include mq(lg) {
+                min-height: 205px;
+                &__header {
+                    &-icon {
+                        width: 42px;
+                        height: 42px;
+                    }
+                    &-data,
+                    &-name {
+                        font-size: 14px;
+                    }
+                    &-logo {
+                        width: 104px;
+                        height: 18px;
+                    }
+                }
+            }
             @include mq(fhd) {
                 min-height: 230px;
 
@@ -437,15 +512,13 @@
                     font-size: 14px;
                 }
             }
-
-            @include mq(fhd) {
+            @include mq(lg) {
                 border-radius: 15px;
 
                 &__header {
                     border-radius: 15px;
                     margin-bottom: 18px;
                 }
-
                 &__body {
                     padding-left: 33px;
                     padding-right: 33px;
@@ -545,13 +618,37 @@
                     line-height: 160%;
                 }
             }
+
             @include mq(sm) {
-               &:nth-child(odd) {
-                   margin-right: 55%;
-               }
-               &:nth-child(even) {
-                   margin-left: 55%;
-               }
+                &:nth-child(odd) {
+                    margin-right: 55%;
+                }
+
+                &:nth-child(even) {
+                    margin-left: 55%;
+                }
+            }
+            @include mq(lg) {
+                margin-bottom: 0;
+                &:nth-child(odd) {
+                    margin-right: 15%;
+                    order: 0;
+                }
+
+                &:nth-child(even) {
+                    margin-left: 15%;
+                    order: 1;
+                }
+            }
+            @include mq(fhd) {
+                &:nth-child(odd) {
+                    margin-right: 1%;
+                }
+
+                &:nth-child(even) {
+                    margin-left: 1%;
+                    order: 0;
+                }
             }
         }
     }

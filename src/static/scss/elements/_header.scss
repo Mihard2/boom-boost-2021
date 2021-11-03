@@ -524,4 +524,35 @@
             }
         }
     }
+    @include mq(hd) {
+        &__search {
+            min-width: 300px;
+        }
+        &__trust {
+            &-stars {
+                flex-direction: row;
+                align-items: flex-end;
+                &-logo {
+                    margin-top: 0;
+                    margin-left: 5px;
+                }
+            }
+            &-counter {
+                font-size: 14px;
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    @include mq(fhd) {
+        &__search {
+            min-width: 320px;
+        }
+        &__login {
+            &-wrapp {
+                align-items: center;
+            }
+        }
+    }
 }

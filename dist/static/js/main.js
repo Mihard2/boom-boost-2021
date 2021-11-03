@@ -634,8 +634,20 @@ document.addEventListener("DOMContentLoaded", function () {
     var slider = new ChiefSlider('.slider', {
       loop: false
     });
-  } // const sliderControl = document.getElementById('con');
+  }
 
+  var sliderControl = document.getElementById('slider-control');
+  var srollSlid_Wrap = document.querySelector('.scroll-slider__wrapp');
+  var scrollSlid_Width = srollSlid_Wrap.offsetWidth;
+  var scrollSlid_Scroll = srollSlid_Wrap.scrollWidth - scrollSlid_Width;
+  var srcollStep = scrollSlid_Scroll / 1000;
+  sliderControl.addEventListener('input', function () {
+    srollSlid_Wrap.scrollLeft = sliderControl.value * 10 * srcollStep;
+  });
+  srollSlid_Wrap.addEventListener('scroll', function () {
+    sliderControl.value = srollSlid_Wrap.scrollLeft / srcollStep / 10;
+  });
+  ;
 
   var smoothHeight = function smoothHeight(itemSelector, buttonSelector, contentSelector) {
     // объявляем основную функцию, которая принимает в качестве параметров селекторы элемента, кнопки внутри элемента и блока с контентом
@@ -680,5 +692,9 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   smoothHeight('.adaptHeight', '.adaptHeight__link', '.adaptHeight__content') // вызываем основную функцию smoothHeight и передаем в качестве параметров  необходимые селекторы
+  ; // const loginForm = document.getElementById('loginPopUp');
+  // const tabSwitch = loginForm.querySelectorAll('.tab__switch');
+  // const tabElement = loginForm.querySelectorAll('.tab__element');
+
   ;
 });

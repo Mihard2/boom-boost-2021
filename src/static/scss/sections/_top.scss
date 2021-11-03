@@ -135,7 +135,7 @@
         }
     }
 
-    @include mq(fhd) {
+    @include mq(hd) {
         &--main {
             .top__content {
                 background-position: 95% 0;
@@ -145,7 +145,7 @@
 
         h1,
         .description {
-            width: 42%;
+            width: 52%;
         }
 
     }

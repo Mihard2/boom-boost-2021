@@ -1,0 +1,42 @@
+include ../../modules/mixins
+
+.popUp-wrap#loginPopUp
+    .popUp-block
+        a.popUp-block__close.
+        .popUp-block__content.tab   
+            a.tab__switch.tab__switch-active(href="/")
+                span sign in
+            a.tab__switch(href="/")
+                span sign up
+            .login__forms 
+                form.login-block__forms--in.tab__element.tab__element-active
+                    +inputLabel('Your email address', 'email', 'real@mail.com')
+                    +inputLabel('Password', 'password', '7888sjdnbhdu')
+                    .separator 
+                    .rememb
+                        label
+                            input(type="checkbox", name="rememb")
+                            span
+                        |Remember me
+                    .reg-network 
+                        .title enter with 
+                        .reg-network__links 
+                            a.icons-main.icons-main__fb(href="/")                     
+                            a.icons-main.icons-main__google(href="/")                     
+                            a.icons-main.icons-main__discord(href="/")                     
+                    input.link.link-bg.submit(type="submit", value="sing up")
+                    .desc Don't have an account?
+                form.login-block__forms--up.tab__element
+                    +inputLabel('Your email address', 'email', 'real@mail.com')
+                    .description
+                        p A password will be sent to your email address.
+                        p Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.
+                    .separator 
+                    .reg-network 
+                        .title enter with 
+                        .reg-network__links 
+                            a.icons-main.icons-main__fb(href="/")                         
+                            a.icons-main.icons-main__google(href="/")                         
+                            a.icons-main.icons-main__discord(href="/")                         
+                    input.link.link-bg.submit(type="submit", value="sing up")
+                    .desc Already have an account? Log in

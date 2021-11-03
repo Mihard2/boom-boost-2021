@@ -134,3 +134,14 @@ mixin link(content, href, transperent, allContent)
         a.link(class=`link-bg--transparent ${allContent}` href=`${href}`)=content
     else
         a.link(class=`link-bg ${allContent}` href=`${href}`)=content
+
+
+mixin inputLabel(label, input, placeholder)
+    label.label-block=label
+        input(type=input, placeholder=placeholder) 
+
+//- mixin picture(path, name, size)
+//-     picture 
+//-         source(sizes="", srcset="", type="image/avif")
+//-         source(sizes="", srcset="", type="image/webp")
+//-         img(src="", srcset="", alt="")

@@ -126,6 +126,19 @@ h2 {
     }
 }
 
+.label-block {
+    display: flex;
+    flex-direction: column;
+    line-height: 190%;
+    input {
+        width: 100%;
+        border-radius: 15px;
+        border: 1px solid $borderColor;
+        line-height: 150%;
+        padding: 13px 16px;
+    }
+}
+
 
 // .left-text {
 //     text-align: left;

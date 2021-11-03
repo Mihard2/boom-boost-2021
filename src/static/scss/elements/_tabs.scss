@@ -20,7 +20,7 @@
 
         li {
             a {
-                @include adaptiv-font(9, 14);
+                @include adaptiv-font(14, 9);
                 display: flex;
                 padding: 8px 13px;
                 font-weight: 600;
@@ -54,6 +54,65 @@
                     }
                 }
             }
+        }
+    }
+
+    @include mq(lg) {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &__nav {
+            margin-right: 50px;
+        }
+    }
+}
+
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+    &__switch {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid $activeColor;
+        margin-bottom: 10px;
+
+        span {
+            text-transform: uppercase;
+            color: $activeColor;
+            @include adaptiv-font(36, 16);
+            font-weight: 900;
+            line-height: 200%;
+        }
+
+        &:hover {
+            background-color: rgba(255, 182, 0, .8);
+
+            span {
+                color: $darkColorFont;
+            }
+        }
+
+        &-active {
+            background-color: $activeColor;
+            pointer-events: none;
+
+            span {
+                color: $darkColorFont;
+            }
+        }
+
+        &:first-child {
+            border-right: 2px solid $activeColor;
+        }
+    }
+
+    &__element {
+        display: none;
+
+        &-active {
+            display: block;
         }
     }
 }

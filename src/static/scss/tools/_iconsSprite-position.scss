@@ -17,6 +17,20 @@
             background-position: 57% 0%;
         }
     }
+    &__fb {
+        background-position: 22.2% 36%;
+
+        &::before {
+            background-position: 22.2% 0%;
+        }
+    }
+    &__google {
+        background-position: 39.7% 36%;
+
+        &::before {
+            background-position: 39.7% 0%;
+        }
+    }
 
     &__instagram {
         background-position: 73% 36%;
