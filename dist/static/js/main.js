@@ -637,16 +637,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var sliderControl = document.getElementById('slider-control');
-  var srollSlid_Wrap = document.querySelector('.scroll-slider__wrapp');
-  var scrollSlid_Width = srollSlid_Wrap.offsetWidth;
-  var scrollSlid_Scroll = srollSlid_Wrap.scrollWidth - scrollSlid_Width;
-  var srcollStep = scrollSlid_Scroll / 1000;
-  sliderControl.addEventListener('input', function () {
-    srollSlid_Wrap.scrollLeft = sliderControl.value * 10 * srcollStep;
-  });
-  srollSlid_Wrap.addEventListener('scroll', function () {
-    sliderControl.value = srollSlid_Wrap.scrollLeft / srcollStep / 10;
-  });
+
+  if (sliderControl) {
+    var srollSlid_Wrap = document.querySelector('.scroll-slider__wrapp');
+    var scrollSlid_Width = srollSlid_Wrap.offsetWidth;
+    var scrollSlid_Scroll = srollSlid_Wrap.scrollWidth - scrollSlid_Width;
+    var srcollStep = scrollSlid_Scroll / 1000;
+    sliderControl.addEventListener('input', function () {
+      srollSlid_Wrap.scrollLeft = sliderControl.value * 10 * srcollStep;
+    });
+    srollSlid_Wrap.addEventListener('scroll', function () {
+      sliderControl.value = srollSlid_Wrap.scrollLeft / srcollStep / 10;
+    });
+  }
+
   ;
 
   var smoothHeight = function smoothHeight(itemSelector, buttonSelector, contentSelector) {
@@ -693,8 +697,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
   smoothHeight('.adaptHeight', '.adaptHeight__link', '.adaptHeight__content') // вызываем основную функцию smoothHeight и передаем в качестве параметров  необходимые селекторы
   ; // const loginForm = document.getElementById('loginPopUp');
-  // const tabSwitch = loginForm.querySelectorAll('.tab__switch');
-  // const tabElement = loginForm.querySelectorAll('.tab__element');
 
-  ;
+  var tabSwitch = document.querySelectorAll('.tab__switch');
+  var tabElement = document.querySelectorAll('.tab__element');
+  tabSwitch.forEach(function (elem) {
+    elem.addEventListener('click', function (e) {
+      e.preventDefault();
+      var parent = elem.closest('.tab');
+      var thisSwitch = parent.querySelectorAll('.tab__switch');
+      var thisElement = parent.querySelectorAll('.tab__element');
+      var dataSwitch = elem.getAttribute('data');
+      thisSwitch.forEach(function (switsh) {
+        switsh.classList.remove('tab__switch-active');
+        elem.classList.add('tab__switch-active');
+      });
+      thisElement.forEach(function (element) {
+        if (element.getAttribute('data') != dataSwitch) {
+          element.classList.remove('tab__element-active');
+        } else {
+          element.classList.add('tab__element-active');
+        }
+      });
+    });
+  }); // let maxH = 0;
+  // document.querySelectorAll('.hmax').each(function () {
+  //     document.querySelector(this).css('height', 'auto');
+  //     console.log(document.querySelector(this).height());
+  //     if (document.querySelector(this).height() > maxH) {
+  //         maxH = document.querySelector(this).height();
+  //     }
+  // });
+  // document.querySelector('.hmax').height(maxH);
+  // let maxH = 0;
+  // function maxHeight(block) {
+  //     const arr = document.querySelectorAll(block);    
+  //     arr.forEach(elem=> {
+  //         const height = elem.offsetHeight;
+  //         console.log(height);
+  //     })
+  // };
+  // maxHeight('.hmax');;
 });

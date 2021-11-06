@@ -1,0 +1,37 @@
+include ../../../modules/mixins
+
+
+.top
+    .top-bg 
+        img(src="static/img/bg/top-2.jpg", alt="")
+    .container.top-content
+        .breadcrumbs
+            a(href="#")  Home
+            a(href="#")  Catalog
+            span Shadowlands Conquesst Cap Boost
+        .top-content__desc
+            h1 Shadowlands Conquest Cap Boost
+            .price $129.99
+                span.price-old $140.00
+            .title options 
+        .top-content__options 
+            +optionChecbox('honor20', '+20 Honor', '€39.99')
+            +optionChecbox('honor30', '+30 Honor', '€59.99')
+            +optionChecbox('honor40', '+40 Honor', '€109.99')
+        .top-content__card
+            .buying-card
+                .buying-card__content 
+                    .title you’re buying
+                    .buying-name Shadowlands Conquest Cap Boost
+                    .buying-desc
+                        span Fast delivery: 3—6 days.
+                        span Flexible price
+                        span Price for 3550 conquest cap
+                .buying-card__price 
+                    .buying-card__price-name Options amount
+                    .buying-card__price-count €39.99
+                .buying-card__price 
+                    .buying-card__price-name Final total
+                    .buying-card__price-count €169.98
+                a(href="#").link.link-bg add to basket
+                a(href="#").link.link-bg--transparent buy right now

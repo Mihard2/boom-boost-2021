@@ -100,6 +100,12 @@ h2 {
     }
 }
 
+.privacy {
+    font-size: 12px;
+    line-height: 150%;
+    margin-bottom: 130px;
+}
+
 .content-block {
     &__header {
         .link {
@@ -130,6 +136,7 @@ h2 {
     display: flex;
     flex-direction: column;
     line-height: 190%;
+
     input {
         width: 100%;
         border-radius: 15px;
@@ -139,6 +146,58 @@ h2 {
     }
 }
 
+.rounded-triangle {
+    display: flex;
+
+    &_block,
+    &_block::before,
+    &_block::after {
+        font-size: 1px;
+        display: flex;
+        width: 8em;
+        height: .5em;
+        border-radius: 10%;
+    }
+
+    &_block {
+        position: relative;
+    }
+
+    &_block::before,
+    &_block::after {
+        content: '';
+        position: absolute;
+        top: -4.2em;
+    }
+
+    &_block::before {
+        left: -2.4em;
+        transform: rotate(-60deg);
+
+    }
+
+    &_block::after {
+        right: -2.4em;
+        transform: rotate(60deg);
+
+    }
+}
+
+.breadcrumbs {
+    margin-bottom: 30px;
+
+    a {
+        &::after {
+            content: "/";
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+        }
+    }
+
+    span {
+        opacity: 0.5;
+    }
+}
 
 // .left-text {
 //     text-align: left;

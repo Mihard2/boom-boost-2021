@@ -4,12 +4,12 @@ include ../../modules/mixins
     .popUp-block
         a.popUp-block__close.
         .popUp-block__content.tab   
-            a.tab__switch.tab__switch-active(href="/")
+            a.tab__switch.tab__switch-active(href="/", data="in")
                 span sign in
-            a.tab__switch(href="/")
+            a.tab__switch(href="/", data="up")
                 span sign up
-            .login__forms 
-                form.login-block__forms--in.tab__element.tab__element-active
+            .login__forms.tab__elements-wrapp
+                form.hmax.login-block__forms--in.tab__element.tab__element-active(data="in")
                     +inputLabel('Your email address', 'email', 'real@mail.com')
                     +inputLabel('Password', 'password', '7888sjdnbhdu')
                     .separator 
@@ -26,7 +26,7 @@ include ../../modules/mixins
                             a.icons-main.icons-main__discord(href="/")                     
                     input.link.link-bg.submit(type="submit", value="sing up")
                     .desc Don't have an account?
-                form.login-block__forms--up.tab__element
+                form.hmax.login-block__forms--up.tab__element(data="up")
                     +inputLabel('Your email address', 'email', 'real@mail.com')
                     .description
                         p A password will be sent to your email address.

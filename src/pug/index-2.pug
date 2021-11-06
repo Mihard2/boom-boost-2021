@@ -1,0 +1,14 @@
+extends layout/base
+
+block variables
+    - var pageTitle = 'Mythic Dungeons'
+    - var page = 'category';
+
+block content
+    div(class=`page-${page}`)
+        include sections/content/tops/interior-pages
+        include pages/category/category
+        include sections/content/truspilot
+        include sections/content/description
+        include sections/content/advantages
+        include sections/privacy

@@ -4,6 +4,8 @@ mixin menu-item(text, link, className, subMenu, text2, text3)
         li.nav-menu__item(class=`${subMenu}`)
             a(href=`${link}`)
                 span.icons-game(class=`icons-game__${className}`)=text
+                .rounded-triangle
+                    .rounded-triangle_block
             ul.sub-menu
                 li.nav-menu__item
                     a(href=`${link}`)
@@ -139,6 +141,15 @@ mixin link(content, href, transperent, allContent)
 mixin inputLabel(label, input, placeholder)
     label.label-block=label
         input(type=input, placeholder=placeholder) 
+
+mixin optionChecbox(name, desc, price)
+    .option-checkbox
+        label 
+            input(type="checkbox", name=`${name}`) 
+            span
+        .option-checkbox__title=desc
+        .option-checkbox__separator
+        .option-checkbox__price + #{price}
 
 //- mixin picture(path, name, size)
 //-     picture 

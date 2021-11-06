@@ -213,7 +213,7 @@
     }
 }
 
-.about-us {
+.description {
     &__content {
         position: relative;
         max-height: 200px;
@@ -238,7 +238,7 @@
     }
 
     &[data-open="true"] {
-        .about-us__content {
+        .description__content {
             &::after {
                 display: none;
             }

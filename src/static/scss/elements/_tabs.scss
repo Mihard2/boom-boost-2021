@@ -70,6 +70,7 @@
 .tab {
     display: flex;
     flex-wrap: wrap;
+
     &__switch {
         display: flex;
         flex: 1;
@@ -105,6 +106,27 @@
 
         &:first-child {
             border-right: 2px solid $activeColor;
+        }
+    }
+
+    &__elements-wrapp {
+        &.animHeight {
+            animation: animHeight 1s;
+            overflow: hidden;
+
+            @keyframes animHeight {
+                0% {
+                    height: auto;
+                }
+
+                50% {
+                    height: 0;
+                }
+
+                100% {
+                    height: auto;
+                }
+            }
         }
     }
 

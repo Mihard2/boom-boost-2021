@@ -1,13 +1,17 @@
 extends layout/base
 
 block variables
-    - var pageTitle = 'INDEX boom-boost'
-    - var page = "main";
+    - var pageTitle = 'CHECKOUT'
+    - var page = 'checkout';
 
 block content
-    include sections/content/abotus
-    include sections/content/truspilot
-    include sections/content/hot-sellers
-    include sections/content/process-work
-    include sections/content/faq
-    include sections/content/subscribe-form
+    div(class=`page-${page}`)
+        include sections/content/tops/checkout
+        include sections/content/description
+        include sections/content/truspilot
+        include sections/content/hot-sellers
+        include sections/content/advantages
+        include sections/content/process-work
+        include sections/content/faq
+        include modules/forms/subscribe-form
+        include sections/privacy

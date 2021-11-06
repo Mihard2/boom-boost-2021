@@ -4,4 +4,5 @@ document.addEventListener("DOMContentLoaded", () => {
         @import './components/sliders.js';
         @import './components/animations.js';
         @import './components/tabs.js';
+        @import './tools/mainScripts.js';
 });

@@ -25,12 +25,13 @@
 
     .content-block {
         flex: 1 auto;
+        overflow: hidden;
 
         &__trustpilot,
         &__newsGuides,
         &__faq,
         &__process-work,
-        &__about-us,
+        &__description,
         &__sub-form {
             .cards-wrapper {
                 margin-left: 0;

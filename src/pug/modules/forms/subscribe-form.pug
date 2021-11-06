@@ -1,0 +1,15 @@
+extends ../../layout/content-block
+
+block variables
+    - sectionClass = "sub-form"
+    - contentTitle = false
+
+block content
+    .sub-form
+        .sub-form__wrapp 
+            h3 Sign up to our Newsletter and receive $5 coupon for first shopping
+            form#subscribe-form.subscribe-form(action="/")
+                input.subscribe-form__input(type="text", name="subscribe", placeholder="myemail@mail.com")
+                input.subscribe-form__btn.link.link-bg(type="submit", value="subscribe")
+        .sub-form__img 
+            img(src="static/img/logo-icons/logo-subscribe.jpg", alt="logo-subscribe.jpg")
