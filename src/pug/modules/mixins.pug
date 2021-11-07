@@ -112,7 +112,9 @@ mixin cardNews(img, date, title, content)
 
 mixin cardFaq(title, content)
     .card-faq.adaptHeight
-        .card-faq__title.adaptHeight__link=title 
+        .card-faq__title.adaptHeight__link=title
+            .rounded-triangle
+                .rounded-triangle_block
         .card-faq__content.adaptHeight__content=content 
 
 

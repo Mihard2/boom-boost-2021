@@ -72,12 +72,15 @@
 
             @include mq(lg) {
                 width: 31.5%;
+
                 &__title {
                     font-size: 16px;
                 }
+
                 &__title {
                     font-size: 16px;
                 }
+
                 &__price-block {
                     font-size: 24px;
 
@@ -226,6 +229,7 @@
                     padding-left: 10px;
                     padding-right: 10px;
                 }
+
                 &__body {
                     &-desc {
                         &--wrapp {
@@ -234,6 +238,7 @@
                     }
                 }
             }
+
             @include mq(fhd) {
                 width: 23.5%;
 
@@ -428,23 +433,28 @@
                 max-height: 171px;
                 overflow: auto;
             }
+
             @include mq(lg) {
                 min-height: 205px;
+
                 &__header {
                     &-icon {
                         width: 42px;
                         height: 42px;
                     }
+
                     &-data,
                     &-name {
                         font-size: 14px;
                     }
+
                     &-logo {
                         width: 104px;
                         height: 18px;
                     }
                 }
             }
+
             @include mq(fhd) {
                 min-height: 230px;
 
@@ -512,6 +522,7 @@
                     font-size: 14px;
                 }
             }
+
             @include mq(lg) {
                 border-radius: 15px;
 
@@ -519,6 +530,7 @@
                     border-radius: 15px;
                     margin-bottom: 18px;
                 }
+
                 &__body {
                     padding-left: 33px;
                     padding-right: 33px;
@@ -560,20 +572,33 @@
                 text-transform: uppercase;
                 letter-spacing: .12em;
                 margin-bottom: 20px;
+                cursor: pointer;
 
-                &::before {
-                    content: '';
-                    display: flex;
-                    width: 20px;
-                    height: 20px;
-                    background-color: red;
+                .rounded-triangle {
                     position: absolute;
-                    right: 0;
-                    top: calc(50% - 10px);
-                    cursor: pointer;
+                    right: 20px;
+                    top: 20px;
+                    transition: all 1s;
+                    .rounded-triangle_block {
+                        background-color: $borderColor;
+                        box-shadow: 0 0 0 2.5em $borderColor;
+                        font-size: 1.4px;
+                        transform: rotate(180deg);
+
+                        &::before,
+                        &::after {
+                            background-color: $borderColor;
+                            box-shadow: 0 0 0 2.5em $borderColor;
+                            font-size: 1.4px;
+                        }
+                    }
                 }
             }
-
+            &[data-open="true"]{
+                .rounded-triangle {
+                    transform: rotate(-180deg);
+                }
+            }
             &__content {
                 padding-right: 10%;
                 line-height: 140%;
@@ -628,8 +653,10 @@
                     margin-left: 55%;
                 }
             }
+
             @include mq(lg) {
                 margin-bottom: 0;
+
                 &:nth-child(odd) {
                     margin-right: 15%;
                     order: 0;
@@ -640,6 +667,7 @@
                     order: 1;
                 }
             }
+
             @include mq(fhd) {
                 &:nth-child(odd) {
                     margin-right: 1%;
